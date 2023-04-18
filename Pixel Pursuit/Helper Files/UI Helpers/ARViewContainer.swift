@@ -7,15 +7,14 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ARViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
-        let officeAnchor = try! PixelPursuit.loadOffice()
-        arView.scene.anchors.append(officeAnchor)
-        
+        arView.addCoaching()
         return arView
     }
     

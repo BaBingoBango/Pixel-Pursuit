@@ -15,7 +15,6 @@
 		AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */; };
 		AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */; };
 		AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */; };
-		AAF3D09729EE6DA100AF8774 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09629EE6DA100AF8774 /* GameView.swift */; };
 		AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09829EE6E4500AF8774 /* BootupView.swift */; };
 		AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */; };
 		AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09A29EE6E4500AF8774 /* GIFView.swift */; };
@@ -24,6 +23,8 @@
 		AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */; };
 		AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */; };
 		AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */; };
+		AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0AF29EE713E00AF8774 /* GameView.swift */; };
+		AAF3D0B229EE74BE00AF8774 /* ARCoachingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0B129EE74BE00AF8774 /* ARCoachingServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 		AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit.rcproject"; sourceTree = "<group>"; };
 		AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
-		AAF3D09629EE6DA100AF8774 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AAF3D09829EE6E4500AF8774 /* BootupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootupView.swift; sourceTree = "<group>"; };
 		AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInstructionsView.swift; sourceTree = "<group>"; };
 		AAF3D09A29EE6E4500AF8774 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pixel-Pursuit-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "static sound effect.mp3"; sourceTree = "<group>"; };
 		AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServices.swift; sourceTree = "<group>"; };
+		AAF3D0AF29EE713E00AF8774 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AAF3D0B129EE74BE00AF8774 /* ARCoachingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoachingServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,18 +119,12 @@
 			children = (
 				AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */,
 				AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */,
-				AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */,
-				AAF3D09629EE6DA100AF8774 /* GameView.swift */,
-				AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */,
-				AAF3D09829EE6E4500AF8774 /* BootupView.swift */,
-				AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */,
-				AAF3D09A29EE6E4500AF8774 /* GIFView.swift */,
-				AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */,
-				AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */,
-				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
-				AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */,
 				AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */,
 				AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */,
+				AAF3D0A929EE706B00AF8774 /* Views */,
+				AAF3D0AA29EE709800AF8774 /* Helper Files */,
+				AAF3D0AB29EE70A700AF8774 /* Fonts */,
+				AAF3D0AC29EE70AC00AF8774 /* Music & Sound Effects */,
 				AAF3D06E29EE6A1C00AF8774 /* Preview Content */,
 			);
 			path = "Pixel Pursuit";
@@ -157,6 +153,61 @@
 				AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */,
 			);
 			path = "Pixel PursuitUITests";
+			sourceTree = "<group>";
+		};
+		AAF3D0A929EE706B00AF8774 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */,
+				AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */,
+				AAF3D09829EE6E4500AF8774 /* BootupView.swift */,
+				AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */,
+				AAF3D0AF29EE713E00AF8774 /* GameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AAF3D0AA29EE709800AF8774 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D0AE29EE70C400AF8774 /* Data Helpers */,
+				AAF3D0AD29EE70BF00AF8774 /* UI Helpers */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		AAF3D0AB29EE70A700AF8774 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AAF3D0AC29EE70AC00AF8774 /* Music & Sound Effects */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
+			);
+			path = "Music & Sound Effects";
+			sourceTree = "<group>";
+		};
+		AAF3D0AD29EE70BF00AF8774 /* UI Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */,
+				AAF3D09A29EE6E4500AF8774 /* GIFView.swift */,
+			);
+			path = "UI Helpers";
+			sourceTree = "<group>";
+		};
+		AAF3D0AE29EE70C400AF8774 /* Data Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */,
+				AAF3D0B129EE74BE00AF8774 /* ARCoachingServices.swift */,
+			);
+			path = "Data Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,15 +342,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF3D0B229EE74BE00AF8774 /* ARCoachingServices.swift in Sources */,
 				AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */,
 				AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */,
 				AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */,
 				AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */,
+				AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */,
 				AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */,
 				AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */,
 				AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */,
 				AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */,
-				AAF3D09729EE6DA100AF8774 /* GameView.swift in Sources */,
 				AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
