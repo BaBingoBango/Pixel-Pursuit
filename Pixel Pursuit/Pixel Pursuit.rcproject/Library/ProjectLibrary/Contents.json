@@ -1,0 +1,97 @@
+[
+  {
+    "libraryIdentifier" : "8c979484ed4ff0675f0ae399795f5ef7",
+    "format" : "model",
+    "displayName" : "rug.usdz"
+  },
+  {
+    "libraryIdentifier" : "3d51cac89cf68e029446312cf941308a",
+    "format" : "model",
+    "displayName" : "monitor.usdz"
+  },
+  {
+    "libraryIdentifier" : "b643b642038e21261584f7619eade8fb",
+    "format" : "model",
+    "displayName" : "laptop.usdz"
+  },
+  {
+    "libraryIdentifier" : "9c9764fa49d8d1bdd273b7160677b338",
+    "format" : "model",
+    "displayName" : "monitor.usdz"
+  },
+  {
+    "libraryIdentifier" : "6228dafad6bde0114a9cf400372046ed",
+    "format" : "model",
+    "displayName" : "keyboard.usdz"
+  },
+  {
+    "libraryIdentifier" : "64e2d61021631dd9285c428b37f53f69",
+    "format" : "model",
+    "displayName" : "mouse.usdz"
+  },
+  {
+    "libraryIdentifier" : "ae4195d8d10b7124d323ac007f5696c1",
+    "format" : "model",
+    "displayName" : "computertower.usdz"
+  },
+  {
+    "libraryIdentifier" : "3dc133fbbc3df3b2f98751578f7f356b",
+    "format" : "model",
+    "displayName" : "bluerug.usdz"
+  },
+  {
+    "libraryIdentifier" : "23bb8a2da9eeaf31cd2f2af995a12df2",
+    "format" : "image",
+    "displayName" : "IMG_20191119_170844_1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "14f08fb9177c8729fc36ab683331faf3",
+    "format" : "image",
+    "displayName" : "IMG_0988.jpeg"
+  },
+  {
+    "libraryIdentifier" : "67e577234b1c846a527161f0bf81dc91",
+    "format" : "image",
+    "displayName" : "IMG_0986.jpeg"
+  },
+  {
+    "libraryIdentifier" : "6430ba3da5ffda54061ba1a842f1838d",
+    "format" : "image",
+    "displayName" : "IMG_0987.jpeg"
+  },
+  {
+    "libraryIdentifier" : "536dda851bbaa98bf34ee8fbde854ad6",
+    "format" : "image",
+    "displayName" : "IMG_0989.jpeg"
+  },
+  {
+    "libraryIdentifier" : "daae87cc862ac5bb30566c22ddb25fa9",
+    "format" : "model",
+    "displayName" : "oldcomputer.usdz"
+  },
+  {
+    "libraryIdentifier" : "94921e1c0326fdbd644dfa08a809df2f",
+    "format" : "image",
+    "displayName" : "howdarethey1024_1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "5a67817f0bdc158faf04bb350cbf7c2b",
+    "format" : "image",
+    "displayName" : "dearmom1024_1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "913dcb4feaa1741d269aa5b19494fe72",
+    "format" : "image",
+    "displayName" : "redacted_memo.jpeg"
+  },
+  {
+    "libraryIdentifier" : "ee8a196178ba2eec602724e76ee62ad6",
+    "format" : "image",
+    "displayName" : "confession1024_1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "f5b39d7a5576a665a5552dd477ed96fe",
+    "format" : "image",
+    "displayName" : "leak1024_1.jpeg"
+  }
+]

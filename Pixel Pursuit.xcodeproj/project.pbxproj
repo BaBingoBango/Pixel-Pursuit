@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */; };
+		AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */; };
+		AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */; };
+		AAF3D07A29EE6A1C00AF8774 /* Pixel_PursuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */; };
+		AAF3D08429EE6A1C00AF8774 /* Pixel_PursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */; };
+		AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */; };
+		AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */; };
+		AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */; };
+		AAF3D09729EE6DA100AF8774 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09629EE6DA100AF8774 /* GameView.swift */; };
+		AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09829EE6E4500AF8774 /* BootupView.swift */; };
+		AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */; };
+		AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09A29EE6E4500AF8774 /* GIFView.swift */; };
+		AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */; };
+		AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */; };
+		AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */; };
+		AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */; };
+		AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAF3D07629EE6A1C00AF8774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF3D05B29EE6A1B00AF8774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF3D06229EE6A1B00AF8774;
+			remoteInfo = "Pixel Pursuit";
+		};
+		AAF3D08029EE6A1C00AF8774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAF3D05B29EE6A1B00AF8774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAF3D06229EE6A1B00AF8774;
+			remoteInfo = "Pixel Pursuit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPursuitApp.swift; sourceTree = "<group>"; };
+		AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAF3D07529EE6A1C00AF8774 /* Pixel PursuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pixel PursuitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitTests.swift; sourceTree = "<group>"; };
+		AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pixel PursuitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITests.swift; sourceTree = "<group>"; };
+		AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit.rcproject"; sourceTree = "<group>"; };
+		AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		AAF3D09629EE6DA100AF8774 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		AAF3D09829EE6E4500AF8774 /* BootupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootupView.swift; sourceTree = "<group>"; };
+		AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInstructionsView.swift; sourceTree = "<group>"; };
+		AAF3D09A29EE6E4500AF8774 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchView.swift; sourceTree = "<group>"; };
+		AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalizingView.swift; sourceTree = "<group>"; };
+		AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoMono.ttf; sourceTree = "<group>"; };
+		AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pixel-Pursuit-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "static sound effect.mp3"; sourceTree = "<group>"; };
+		AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServices.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAF3D06029EE6A1B00AF8774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07229EE6A1C00AF8774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07C29EE6A1C00AF8774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAF3D05A29EE6A1B00AF8774 = {
+			isa = PBXGroup;
+			children = (
+				AAF3D06529EE6A1B00AF8774 /* Pixel Pursuit */,
+				AAF3D07829EE6A1C00AF8774 /* Pixel PursuitTests */,
+				AAF3D08229EE6A1C00AF8774 /* Pixel PursuitUITests */,
+				AAF3D06429EE6A1B00AF8774 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAF3D06429EE6A1B00AF8774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */,
+				AAF3D07529EE6A1C00AF8774 /* Pixel PursuitTests.xctest */,
+				AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAF3D06529EE6A1B00AF8774 /* Pixel Pursuit */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */,
+				AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */,
+				AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */,
+				AAF3D09629EE6DA100AF8774 /* GameView.swift */,
+				AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */,
+				AAF3D09829EE6E4500AF8774 /* BootupView.swift */,
+				AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */,
+				AAF3D09A29EE6E4500AF8774 /* GIFView.swift */,
+				AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */,
+				AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */,
+				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
+				AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */,
+				AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */,
+				AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */,
+				AAF3D06E29EE6A1C00AF8774 /* Preview Content */,
+			);
+			path = "Pixel Pursuit";
+			sourceTree = "<group>";
+		};
+		AAF3D06E29EE6A1C00AF8774 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAF3D07829EE6A1C00AF8774 /* Pixel PursuitTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */,
+			);
+			path = "Pixel PursuitTests";
+			sourceTree = "<group>";
+		};
+		AAF3D08229EE6A1C00AF8774 /* Pixel PursuitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */,
+				AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */,
+			);
+			path = "Pixel PursuitUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAF3D06229EE6A1B00AF8774 /* Pixel Pursuit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF3D08929EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel Pursuit" */;
+			buildPhases = (
+				AAF3D05F29EE6A1B00AF8774 /* Sources */,
+				AAF3D06029EE6A1B00AF8774 /* Frameworks */,
+				AAF3D06129EE6A1B00AF8774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pixel Pursuit";
+			productName = "Pixel Pursuit";
+			productReference = AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAF3D07429EE6A1C00AF8774 /* Pixel PursuitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF3D08C29EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel PursuitTests" */;
+			buildPhases = (
+				AAF3D07129EE6A1C00AF8774 /* Sources */,
+				AAF3D07229EE6A1C00AF8774 /* Frameworks */,
+				AAF3D07329EE6A1C00AF8774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF3D07729EE6A1C00AF8774 /* PBXTargetDependency */,
+			);
+			name = "Pixel PursuitTests";
+			productName = "Pixel PursuitTests";
+			productReference = AAF3D07529EE6A1C00AF8774 /* Pixel PursuitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAF3D07E29EE6A1C00AF8774 /* Pixel PursuitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAF3D08F29EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel PursuitUITests" */;
+			buildPhases = (
+				AAF3D07B29EE6A1C00AF8774 /* Sources */,
+				AAF3D07C29EE6A1C00AF8774 /* Frameworks */,
+				AAF3D07D29EE6A1C00AF8774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAF3D08129EE6A1C00AF8774 /* PBXTargetDependency */,
+			);
+			name = "Pixel PursuitUITests";
+			productName = "Pixel PursuitUITests";
+			productReference = AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAF3D05B29EE6A1B00AF8774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AAF3D06229EE6A1B00AF8774 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					AAF3D07429EE6A1C00AF8774 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = AAF3D06229EE6A1B00AF8774;
+					};
+					AAF3D07E29EE6A1C00AF8774 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = AAF3D06229EE6A1B00AF8774;
+					};
+				};
+			};
+			buildConfigurationList = AAF3D05E29EE6A1B00AF8774 /* Build configuration list for PBXProject "Pixel Pursuit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAF3D05A29EE6A1B00AF8774;
+			productRefGroup = AAF3D06429EE6A1B00AF8774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAF3D06229EE6A1B00AF8774 /* Pixel Pursuit */,
+				AAF3D07429EE6A1C00AF8774 /* Pixel PursuitTests */,
+				AAF3D07E29EE6A1C00AF8774 /* Pixel PursuitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAF3D06129EE6A1B00AF8774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */,
+				AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */,
+				AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */,
+				AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07329EE6A1C00AF8774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07D29EE6A1C00AF8774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAF3D05F29EE6A1B00AF8774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */,
+				AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */,
+				AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */,
+				AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */,
+				AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */,
+				AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */,
+				AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */,
+				AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */,
+				AAF3D09729EE6DA100AF8774 /* GameView.swift in Sources */,
+				AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07129EE6A1C00AF8774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF3D07A29EE6A1C00AF8774 /* Pixel_PursuitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAF3D07B29EE6A1C00AF8774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */,
+				AAF3D08429EE6A1C00AF8774 /* Pixel_PursuitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAF3D07729EE6A1C00AF8774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF3D06229EE6A1B00AF8774 /* Pixel Pursuit */;
+			targetProxy = AAF3D07629EE6A1C00AF8774 /* PBXContainerItemProxy */;
+		};
+		AAF3D08129EE6A1C00AF8774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAF3D06229EE6A1B00AF8774 /* Pixel Pursuit */;
+			targetProxy = AAF3D08029EE6A1C00AF8774 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAF3D08729EE6A1C00AF8774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAF3D08829EE6A1C00AF8774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAF3D08A29EE6A1C00AF8774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pixel Pursuit/Preview Content\"";
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pixel-Pursuit-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-Pursuit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAF3D08B29EE6A1C00AF8774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pixel Pursuit/Preview Content\"";
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pixel-Pursuit-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-Pursuit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAF3D08D29EE6A1C00AF8774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixel Pursuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pixel Pursuit";
+			};
+			name = Debug;
+		};
+		AAF3D08E29EE6A1C00AF8774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixel Pursuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pixel Pursuit";
+			};
+			name = Release;
+		};
+		AAF3D09029EE6A1C00AF8774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pixel Pursuit";
+			};
+			name = Debug;
+		};
+		AAF3D09129EE6A1C00AF8774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GUDZ7ALN9J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pixel Pursuit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAF3D05E29EE6A1B00AF8774 /* Build configuration list for PBXProject "Pixel Pursuit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF3D08729EE6A1C00AF8774 /* Debug */,
+				AAF3D08829EE6A1C00AF8774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF3D08929EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel Pursuit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF3D08A29EE6A1C00AF8774 /* Debug */,
+				AAF3D08B29EE6A1C00AF8774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF3D08C29EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel PursuitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF3D08D29EE6A1C00AF8774 /* Debug */,
+				AAF3D08E29EE6A1C00AF8774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAF3D08F29EE6A1C00AF8774 /* Build configuration list for PBXNativeTarget "Pixel PursuitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF3D09029EE6A1C00AF8774 /* Debug */,
+				AAF3D09129EE6A1C00AF8774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAF3D05B29EE6A1B00AF8774 /* Project object */;
+}
