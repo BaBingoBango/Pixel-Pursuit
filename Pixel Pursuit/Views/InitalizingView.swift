@@ -32,7 +32,7 @@ struct InitalizingView: View {
             VStack {
                 Spacer()
                 
-                HStack {
+                HStack(alignment: .bottom) {
                     Text("International Digital Defense Authority\nMission Communication Subsystem\nSerial No. WWDC2023\nVer. 6.5.23".uppercased())
                         .font(robotoMonoFont(12.5))
                         .foregroundColor(.red)
@@ -49,6 +49,7 @@ struct InitalizingView: View {
                         .frame(width: 150)
                 }
             }
+            .padding(.horizontal)
         }
         .onReceive(initalizingTextUpdateTimer) { _ in
             if !initalizingText.isEmpty {

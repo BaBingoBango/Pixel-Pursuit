@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
     var body: some View {
         ZStack {
-            ARViewContainer()
+            ARGameView()
             
             VStack {
                 ZStack {

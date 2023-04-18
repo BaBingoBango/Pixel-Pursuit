@@ -13,6 +13,7 @@ struct ARInstructionsView: View {
     // MARK: View Variables
     let opacityTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var viewOpacity = 0.0
+    @Binding var sceneCode: Int
     
     // MARK: View Body
     var body: some View {
@@ -70,14 +71,18 @@ struct ARInstructionsView: View {
                         .font(robotoMonoFont(50))
                         .foregroundColor(.red)
                     
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.red)
-                            .frame(width: 352, height: 75)
-                        
-                        Text("Activate System".uppercased())
-                            .font(robotoMonoFont(30))
-                            .foregroundColor(.black)
+                    Button(action: {
+                        sceneCode += 1
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.red)
+                                .frame(width: 352, height: 75)
+                            
+                            Text("Activate System".uppercased())
+                                .font(robotoMonoFont(30))
+                                .foregroundColor(.black)
+                        }
                     }
                     
                     Text("<<<")
@@ -106,7 +111,7 @@ struct ARInstructionsView: View {
 // MARK: View Preview
 struct ARInstructionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ARInstructionsView()
+        ARInstructionsView(sceneCode: .constant(3))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

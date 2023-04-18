@@ -14,7 +14,7 @@
 		AAF3D08429EE6A1C00AF8774 /* Pixel_PursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */; };
 		AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */; };
 		AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */; };
-		AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */; };
+		AAF3D09529EE6D2E00AF8774 /* ARGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */; };
 		AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09829EE6E4500AF8774 /* BootupView.swift */; };
 		AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */; };
 		AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09A29EE6E4500AF8774 /* GIFView.swift */; };
@@ -55,7 +55,7 @@
 		AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITests.swift; sourceTree = "<group>"; };
 		AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit.rcproject"; sourceTree = "<group>"; };
-		AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGameView.swift; sourceTree = "<group>"; };
 		AAF3D09829EE6E4500AF8774 /* BootupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootupView.swift; sourceTree = "<group>"; };
 		AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInstructionsView.swift; sourceTree = "<group>"; };
 		AAF3D09A29EE6E4500AF8774 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		AAF3D0AD29EE70BF00AF8774 /* UI Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				AAF3D09429EE6D2E00AF8774 /* ARViewContainer.swift */,
+				AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */,
 				AAF3D09A29EE6E4500AF8774 /* GIFView.swift */,
 			);
 			path = "UI Helpers";
@@ -344,7 +344,7 @@
 			files = (
 				AAF3D0B229EE74BE00AF8774 /* ARCoachingServices.swift in Sources */,
 				AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */,
-				AAF3D09529EE6D2E00AF8774 /* ARViewContainer.swift in Sources */,
+				AAF3D09529EE6D2E00AF8774 /* ARGameView.swift in Sources */,
 				AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */,
 				AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */,
 				AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */,
