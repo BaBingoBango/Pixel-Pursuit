@@ -8,6 +8,18 @@
 import UIKit
 import SwiftUI
 
+// MARK: Global Variables
+/// The AR scene that should currently be presented.
+var ARsceneID = ARSceneID.diskTable
+
+// MARK: App Fonts
+/// The Roboto Mono font, downloaded from Google Fonts.
+func robotoMonoFont(_ size: Double) -> Font {
+    let fontURL = Bundle.main.url(forResource: "RobotoMono", withExtension: "ttf")! as CFURL
+    CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
+    return Font(UIFont(name: "Roboto Mono", size:  size)!)
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -44,12 +56,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-// MARK: App Fonts
-/// The Roboto Mono font, downloaded from Google Fonts.
-func robotoMonoFont(_ size: Double) -> Font {
-    let fontURL = Bundle.main.url(forResource: "RobotoMono", withExtension: "ttf")! as CFURL
-    CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
-    return Font(UIFont(name: "Roboto Mono", size:  size)!)
 }

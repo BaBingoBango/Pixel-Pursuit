@@ -8,26 +8,22 @@
 import SwiftUI
 
 struct GameView: View {
+    
+    @State var chatCode = 0
+    @State var elementOpacity = 0.0
+    @State var chatBoxSpeaker = "BOOTING..."
+    @State var chatBoxMessage = "Connecting..."
+    @State var objectiveMessage = "BOOTING..."
+    @State var actionButtonMessage = ""
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         ZStack {
-            ARGameView()
+            var ARgameView = ARGameView(scene: .coaching)
+            ARgameView
             
             VStack {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.red)
-                        .frame(width: 700, height: 55)
-                        .opacity(0.1)
-                        .border(.red, width: 5)
-                    
-                    Text("Example Objective".uppercased())
-                        .foregroundColor(.red)
-                        .font(robotoMonoFont(35))
-                        .fontWeight(.bold)
-                }
-                .padding(.top)
-                
-                HStack {
+                HStack(alignment: .top) {
                     ZStack {
                         Rectangle()
                             .foregroundColor(.red)
@@ -46,39 +42,111 @@ struct GameView: View {
                                 .padding(.leading, 5)
                             
                             VStack(alignment: .leading) {
-                                Text("Agent W")
+                                Text(chatBoxSpeaker)
                                     .foregroundColor(.red)
                                     .fontWeight(.bold)
                                     .font(robotoMonoFont(20))
                                 
-                                Text("Hello there, Agent! This is some example text of what Agent W might say.")
+                                Text(verbatim: {
+                                    switch ARsceneID {
+                                    case .coaching:
+                                        return diskTableSceneChats[chatCode]
+                                    case .diskTable:
+                                        return diskTableSceneChats[chatCode]
+                                    case .office:
+                                        return diskTableSceneChats[chatCode]
+                                    case .disk:
+                                        return diskTableSceneChats[chatCode]
+                                    case .photos:
+                                        return diskTableSceneChats[chatCode]
+                                    case .desktop:
+                                        return diskTableSceneChats[chatCode]
+                                    case .webHistory:
+                                        return diskTableSceneChats[chatCode]
+                                    case .secretServer:
+                                        return diskTableSceneChats[chatCode]
+                                    }
+                                }())
+                                    .minimumScaleFactor(0.5)
                                     .foregroundColor(.red)
-                                    .font(robotoMonoFont(15))
+                                    .font(robotoMonoFont(17.5))
                             }
+                            
+                            Spacer()
                         }
                         .padding(10)
                     }
-                    .frame(width: 400, height: 125)
+                    .frame(width: 500, height: 125)
                     
                     Spacer()
+                    
+                    VStack(alignment: .trailing, spacing: 0) {
+                        Text("[OBJECTIVE]")
+                            .font(robotoMonoFont(30))
+                            .fontWeight(.bold)
+                            .foregroundColor(.red)
+                        
+                        Text(objectiveMessage)
+                            .font(robotoMonoFont(25))
+                            .foregroundColor(.red)
+                            .multilineTextAlignment(.trailing)
+                    }
                 }
+                .padding()
                 
                 Spacer()
                 
-                ZStack {
-                    Rectangle()
+                HStack {
+                    let cornerTextView = Text("International Digital Defense Authority\nMission Visualization Interface\nSerial No. WWDC2023\nVer. 6.5.23".uppercased())
+                        .font(robotoMonoFont(12.5))
                         .foregroundColor(.red)
-                        .frame(width: 350, height: 75)
+                        .padding(.leading)
+                    cornerTextView
                     
-                    Text("EXAMPLE ACTION")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(robotoMonoFont(30))
+                    Spacer()
+                    
+                    Button(action: {
+                        switch actionButtonMessage {
+                        case "[tap to advance text]": chatCode += 1
+                        case "[search amanda's office]": ARsceneID = .office; ARgameView = ARGameView(scene: .office)
+                        default: print("unknown action requested! oops!")
+                        }
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.red)
+                                .frame(width: 350, height: 75)
+                            
+                            Text(actionButtonMessage)
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .font(robotoMonoFont(25))
+                        }
+                        .padding(.bottom)
+                        .opacity(actionButtonMessage.isEmpty ? 0 : 1)
+                    }
+                    
+                    Spacer()
+                    
+                    cornerTextView
+                        .hidden()
                 }
-                .padding(.bottom)
+            }
+            .onReceive(timer) { _ in
+                if ARsceneID == .diskTable {
+                    if elementOpacity >= 0.9 && chatBoxSpeaker == "BOOTING..." {
+                        chatBoxSpeaker = "AGENT_W"
+                        chatCode += 1
+                        objectiveMessage = "Listen to Agent W\nfor instructions."
+                        actionButtonMessage = "[tap to advance text]"
+                    } else {
+                        elementOpacity += 0.02
+                    }
+                }
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .opacity(elementOpacity)
     }
 }
 
