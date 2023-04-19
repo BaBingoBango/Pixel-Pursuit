@@ -11,24 +11,28 @@ import SwiftUI
 struct DispatchView: View {
     
     // MARK: View Variables
-    @State var sceneCode = 1
+    @State var sceneCode = 0
     let viewSwitchTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     // MARK: View Body
     var body: some View {
         Group {
-            if sceneCode == 1 {
+            if sceneCode == 0 {
+                PowerSwitchView(sceneCode: $sceneCode)
+            } else if sceneCode == 1 {
                 InitalizingView()
             } else if sceneCode == 2 {
                 BootupView()
             } else if sceneCode == 3 {
                 ARInstructionsView(sceneCode: $sceneCode)
+            } else if sceneCode == 4 {
+                GameView(sceneCode: $sceneCode)
             } else {
-                GameView()
+                FinaleView()
             }
         }
         .onReceive(viewSwitchTimer) { _ in
-            if sceneCode <= 2 {
+            if sceneCode >= 1 && sceneCode <= 2 {
                 sceneCode += 1
             }
         }

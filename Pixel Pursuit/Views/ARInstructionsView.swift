@@ -54,11 +54,11 @@ struct ARInstructionsView: View {
                 
                 Spacer()
                 
-                Text("This system should only accessed by authorized IDDA agents, under penalty of international law.")
+                Text("This is a system for investigating cyber crimes. Only authorized IDDA agents and approved contractors are allowed to access it, under penalty of international law.")
                     .font(robotoMonoFont(25))
                     .multilineTextAlignment(.center)
                 
-                Text("Before activating, please ensure you are facing a wall suitable for augmented reality experiences.")
+                Text("Before activating, please ensure you have a floor space suitable for large AR activities - good luck! :)")
                     .font(robotoMonoFont(25))
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)

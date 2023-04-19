@@ -10,7 +10,7 @@ import SwiftUI
 
 // MARK: Global Variables
 /// The AR scene that should currently be presented.
-var ARsceneID = ARSceneID.diskTable
+var ARsceneID = ARSceneID.coaching
 
 // MARK: App Fonts
 /// The Roboto Mono font, downloaded from Google Fonts.
@@ -18,6 +18,12 @@ func robotoMonoFont(_ size: Double) -> Font {
     let fontURL = Bundle.main.url(forResource: "RobotoMono", withExtension: "ttf")! as CFURL
     CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
     return Font(UIFont(name: "Roboto Mono", size:  size)!)
+}
+/// The Times New Roman font, included with macOS.
+func timesNewRomanFont(_ size: Double) -> Font {
+    let fontURL = Bundle.main.url(forResource: "TimesNewRoman", withExtension: "ttf")! as CFURL
+    CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
+    return Font(UIFont(name: "Times New Roman", size:  size)!)
 }
 
 @main
@@ -28,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // MARK: App Entry Point
-        let contentView = GameView()
+        let contentView = DispatchView()
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(frame: UIScreen.main.bounds)

@@ -5,6 +5,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Fonts/RobotoMono.ttf</string>
+		<string>Fonts/TimesNewRoman.ttf</string>
+		<string>Fonts/TimesNewRomanItalic.ttf</string>
+		<string>Fonts/TimesNewRomanBold.ttf</string>
+		<string>Fonts/TimesNewRomanBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

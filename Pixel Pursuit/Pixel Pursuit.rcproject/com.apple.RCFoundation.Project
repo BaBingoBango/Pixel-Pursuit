@@ -226,9 +226,9 @@
                   0.47524124383926392,
                   -0.11326967179775238,
                   0,
-                  1.2887208461761475,
-                  0.76404470205307007,
-                  -0.30073392391204834,
+                  4.3431615829467773,
+                  2.5749328136444092,
+                  -1.0135135650634766,
                   1
                 ],
                 "sceneTransform" : [
@@ -4881,7 +4881,7 @@
                           "text",
                           {
                             "typeName" : "String",
-                            "value" : "LESLIE’S COMPUTER <3"
+                            "value" : "AMANDA’S COMPUTER <3"
                           }
                         ],
                         [
@@ -4927,14 +4927,14 @@
                         0,
                         0,
                         0,
-                        1.3709063750866335e-06,
-                        -0.99999958276748657,
+                        3.039834382434492e-06,
+                        -0.99999910593032837,
                         0,
                         0,
-                        0.99999958276748657,
-                        1.3709063750866335e-06,
+                        0.99999910593032837,
+                        3.039834382434492e-06,
                         0,
-                        -0.031922370195388794,
+                        -0.0089874099940061569,
                         1.0046045780181885,
                         1.8858455419540405,
                         1
@@ -7160,7 +7160,326 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "83F43D54-A615-4CF1-BE84-FF848E736062"
+                                          ],
+                                          "userIdentifier" : "Approach Photos Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "66718F99-873A-4789-91BE-87EE8EE84376",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "09BC4EE6-FB0C-4F70-BB79-438CCDD10B39",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.86274510622024536,
+                        0.3333333432674408,
+                        0.41568627953529358,
+                        1
+                      ],
+                      "identifier" : "13C59EC5-2C79-4DF6-A84F-64FDD332A2BA",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Photos Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "83F43D54-A615-4CF1-BE84-FF848E736062"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "85445C45-68FA-4629-A47F-ADC5EE6E2BB2",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "8ECC9C91-E054-4DEA-8456-1E4C7B74C5F7"
+                                          ],
+                                          "userIdentifier" : "Approach Desktop Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "60343B04-D543-4E17-B00A-2DB7C1BD9C24",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "E9D00881-65FB-4EA0-A32E-3E79245BC305",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.87450981140136719,
+                        0.47058823704719543,
+                        0.31764706969261169,
+                        1
+                      ],
+                      "identifier" : "C597A9A6-2332-4C1D-AEB1-5D7D75DC9A92",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Desktop Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "8ECC9C91-E054-4DEA-8456-1E4C7B74C5F7"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "C5E6E591-0821-4C7A-93A3-09B47436E808",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "0707CA61-F962-4766-A544-79AF81412E6F"
+                                          ],
+                                          "userIdentifier" : "Approach Web Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "C78A1893-FD1F-48CF-A6A0-F01F0BB74EC8",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "1D8D72D2-C48E-43D0-AF9C-47C8BAAE6889",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.92156863212585449,
+                        0.72156864404678345,
+                        0.31372550129890442,
+                        1
+                      ],
+                      "identifier" : "0FA1E1E1-37FB-4F19-98EE-069331DA53D4",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Web Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "0707CA61-F962-4766-A544-79AF81412E6F"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "79CC808C-9829-44A6-BE77-BD7C1F9708CF",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                },
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "C11EAB5B-1C7B-4947-B61D-6660A0CB464D"
+                                          ],
+                                          "userIdentifier" : "Approach Computer Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "8E294BA6-DB37-426D-BFA8-82AB95803F51",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "2CE7210B-0796-4F35-AEC1-26D33EC703B5",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.44313725829124451,
+                        0.68627452850341797,
+                        0.36078432202339172,
+                        1
+                      ],
+                      "identifier" : "6D8AB861-F53D-49D6-B067-9871E6815225",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Computer Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "C11EAB5B-1C7B-4947-B61D-6660A0CB464D"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "B502199C-A960-4E60-A9FA-89D813E1604B",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -7375,21 +7694,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        0.44700822234153748,
+                        0.63238286972045898,
                         0,
-                        -0.44731613993644714,
+                        9.8398365011576061e-09,
                         0,
                         0,
                         0.63238334655761719,
                         0,
                         0,
-                        0.44731622934341431,
+                        -9.8398373893360258e-09,
                         0,
-                        0.44700831174850464,
+                        0.63238292932510376,
                         0,
-                        -0.4018387496471405,
-                        -1.1920928955078125e-07,
-                        -1.4441890716552734,
+                        0.60647463798522949,
+                        -1.1920928244535389e-07,
+                        -1.8050445318222046,
                         1
                       ]
                     }
@@ -7472,182 +7791,39 @@
                             "typeName" : "UUID",
                             "value" : "0707CA61-F962-4766-A544-79AF81412E6F"
                           }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Web Table"
+                          }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        0.70710688829421997,
+                        -0.00034439560840837657,
                         0,
-                        0.70710659027099609,
+                        0.99999988079071045,
                         0,
                         0,
                         1,
                         0,
                         0,
-                        -0.70710659027099609,
+                        -0.99999988079071045,
                         0,
-                        0.70710688829421997,
+                        -0.00034439560840837657,
                         0,
-                        -0.12821044027805328,
+                        0.60701996088027954,
                         0,
-                        -1.1715199947357178,
+                        -1.4187536239624023,
                         1
                       ]
                     }
                   },
-                  "8C6A8937-5ED7-4592-9199-3673A8827637" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "item",
-                          {
-                            "typeName" : "String",
-                            "value" : "Notepad"
-                          }
-                        ],
-                        [
-                          "style",
-                          {
-                            "typeName" : "String",
-                            "value" : "Realistic"
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "item" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "55C50210-AA08-4BAE-9D0E-1025E31C0EF6"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.Notepad.dcc9a6f5-091b-4ce8-8d13-2533477b4eec",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "FC25E2E3-BD54-4C03-9BC8-D60A11B66221"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        -0.70710468292236328,
-                        0,
-                        -0.7071075439453125,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                        0.7071075439453125,
-                        0,
-                        -0.70710468292236328,
-                        0,
-                        -0.041786491870880127,
-                        0.2318776547908783,
-                        1.0022779703140259,
-                        1
-                      ]
-                    }
-                  },
-                  "9AF4E206-6893-46F4-93BB-12CA669DD5B0" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "item",
-                          {
-                            "typeName" : "String",
-                            "value" : "Dining Table"
-                          }
-                        ],
-                        [
-                          "style",
-                          {
-                            "typeName" : "String",
-                            "value" : "Realistic"
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "iconicItem" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "221C3944-1C2B-4455-933F-C6133DA7925E"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "item" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "8731637B-ADB5-45DB-A292-E08649E61B5E"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.DiningTable.a97e614b-2c63-4997-8a71-563aa9261a6a",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "698F43A5-0257-41A6-AF7A-9C9E23894A49"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        0.16611844301223755,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0.16611844301223755,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0.16611844301223755,
-                        0,
-                        1.649168848991394,
-                        0.60032474994659424,
-                        0.85224181413650513,
-                        1
-                      ]
-                    }
-                  },
+                  "8C6A8937-5ED7-4592-9199-3673A8827637" : null,
+                  "9AF4E206-6893-46F4-93BB-12CA669DD5B0" : null,
                   "9CE18122-1078-4B07-B65E-98F724BD4229" : {
                     "overrides" : {
                       "arguments" : [
@@ -7726,6 +7902,13 @@
                             "typeName" : "UUID",
                             "value" : "8ECC9C91-E054-4DEA-8456-1E4C7B74C5F7"
                           }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Desktop Table"
+                          }
                         ]
                       ]
                     },
@@ -7750,75 +7933,7 @@
                       ]
                     }
                   },
-                  "45BAF7BD-2438-4C0C-9489-6C6ADDE4A596" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "item",
-                          {
-                            "typeName" : "String",
-                            "value" : "Tall Chair"
-                          }
-                        ],
-                        [
-                          "style",
-                          {
-                            "typeName" : "String",
-                            "value" : "Realistic"
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "item" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "5BD6A6FC-ADB1-4EFC-A653-D51E07301E64"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.TallChair.b6044822-4d19-4d2b-b455-b754168345cc",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "D8A1D3DA-1080-4ECF-B502-50EC63269524"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        -0.16611844301223755,
-                        0,
-                        1.4522548497097887e-08,
-                        0,
-                        0,
-                        0.16611844301223755,
-                        0,
-                        0,
-                        -1.4522548497097887e-08,
-                        0,
-                        -0.16611844301223755,
-                        0,
-                        1.6491707563400269,
-                        0.62144041061401367,
-                        0.95809853076934814,
-                        1
-                      ]
-                    }
-                  },
+                  "45BAF7BD-2438-4C0C-9489-6C6ADDE4A596" : null,
                   "64B66AAA-4F25-45E5-AD97-15571A915F20" : {
                     "overrides" : {
                       "arguments" : [
@@ -8247,248 +8362,26 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        0.44716182351112366,
+                        1.1307875524835254e-07,
                         0,
-                        0.44716170430183411,
-                        0,
-                        0,
-                        0.63238340616226196,
-                        0,
-                        0,
-                        -0.44716170430183411,
-                        0,
-                        0.44716182351112366,
-                        0,
-                        1.9935611486434937,
-                        0,
-                        -1.1626853942871094,
-                        1
-                      ]
-                    }
-                  },
-                  "617F510B-113B-47CD-BDED-B341CCF860CD" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "backgroundColors",
-                          {
-                            "typeName" : "String",
-                            "value" : "7"
-                          }
-                        ],
-                        [
-                          "height",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.65500000000000003
-                          }
-                        ],
-                        [
-                          "mounting",
-                          {
-                            "typeName" : "String",
-                            "value" : "single"
-                          }
-                        ],
-                        [
-                          "poleHeight",
-                          {
-                            "typeName" : "Double",
-                            "value" : 1.5530351915250891
-                          }
-                        ],
-                        [
-                          "swapColors",
-                          {
-                            "typeName" : "Bool",
-                            "value" : false
-                          }
-                        ],
-                        [
-                          "symbolColors",
-                          {
-                            "typeName" : "String",
-                            "value" : "1"
-                          }
-                        ],
-                        [
-                          "text",
-                          {
-                            "typeName" : "String",
-                            "value" : "BACK TO\nOFFICE"
-                          }
-                        ],
-                        [
-                          "textScale",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.69999999999999996
-                          }
-                        ],
-                        [
-                          "type",
-                          {
-                            "typeName" : "String",
-                            "value" : "square"
-                          }
-                        ],
-                        [
-                          "width",
-                          {
-                            "typeName" : "Double",
-                            "value" : 1.0800000000000001
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "squareNoEditBorder_1" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "88CEC587-FB1B-464A-AB0F-06A168970035"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditFace_1" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "F90D2F4C-505F-4DCD-A7BA-6F7AB696C9D2"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditGround_1" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "F7B7DB85-50D4-4418-B72C-48CA6AF1F8DB"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditHangingPinched0" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "A2049BA6-BA91-4444-A840-55E2A07671AF"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditHangingPinched1" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "D39A8126-6A11-44A1-A9F0-92B87ACFB166"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditHangingPinchedNoEditCap" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "E122AEF8-A608-48AA-BCD0-39E6BDF88F26"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareNoEditSingle0" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "7C2FA0C3-7011-4F98-818C-B5ABEB532A4C"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "squareText_1" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "A3833382-0086-43AA-988F-91E910A01D3C"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.CoreAssetFactories.SignAssetFactory",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "46C4F543-F910-4FC4-8F90-E5967C56AA35"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        -0.44716194272041321,
-                        0,
-                        0.44716164469718933,
+                        0.63238227367401123,
                         0,
                         0,
                         0.63238340616226196,
                         0,
                         0,
-                        -0.44716164469718933,
+                        -0.63238227367401123,
                         0,
-                        -0.44716194272041321,
+                        1.1307875524835254e-07,
                         0,
-                        2.0121438503265381,
+                        2.1278524398803711,
                         0,
-                        1.2410515546798706,
+                        -0.0058678984642028809,
                         1
                       ]
                     }
                   },
+                  "617F510B-113B-47CD-BDED-B341CCF860CD" : null,
                   "694B080E-4033-480E-AF60-82A59C6F0E9C" : {
                     "overrides" : {
                       "children" : {
@@ -8576,21 +8469,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        0.37436917424201965,
+                        5.6802520020937664e-07,
                         0,
-                        0.37436908483505249,
+                        0.52943778038024902,
                         0,
                         0,
                         0.52943789958953857,
                         0,
                         0,
-                        -0.37436908483505249,
+                        -0.52943778038024902,
                         0,
-                        0.37436917424201965,
+                        5.6802520020937664e-07,
                         0,
-                        1.6782770156860352,
-                        0.60286235809326172,
-                        -0.85112398862838745,
+                        1.684605598449707,
+                        0.60286223888397217,
+                        -0.0085001587867736816,
                         1
                       ]
                     }
@@ -8637,21 +8530,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.61065250635147095,
+                        -0.6810944676399231,
                         -0.18893690407276154,
-                        -0.35256129503250122,
+                        0.18249949812889099,
                         0,
-                        0.36499783396720886,
-                        7.2663792707317043e-06,
-                        -0.63219714164733887,
+                        -0.18893982470035553,
+                        7.0923347266216297e-06,
+                        -0.70512288808822632,
                         0,
-                        0.16362826526165009,
-                        -0.7051231861114502,
-                        0.094462357461452484,
+                        0.18249759078025818,
+                        -0.70512312650680542,
+                        -0.048907671123743057,
                         0,
-                        -0.1926448792219162,
-                        0.76991045475006104,
-                        0.95036262273788452,
+                        0.51371312141418457,
+                        0.76991033554077148,
+                        1.3124343156814575,
                         1
                       ]
                     }
@@ -8697,21 +8590,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.61065250635147095,
+                        -0.6810944676399231,
                         -0.18893690407276154,
-                        -0.35256129503250122,
+                        0.18249949812889099,
                         0,
-                        0.36499783396720886,
-                        7.2663792707317043e-06,
-                        -0.63219714164733887,
+                        -0.18893982470035553,
+                        7.0923347266216297e-06,
+                        -0.70512288808822632,
                         0,
-                        0.16362826526165009,
-                        -0.7051231861114502,
-                        0.094462357461452484,
+                        0.18249759078025818,
+                        -0.70512312650680542,
+                        -0.048907671123743057,
                         0,
-                        -0.21740677952766418,
-                        0.77051824331283569,
-                        1.1780228614807129,
+                        0.65718424320220947,
+                        0.77051812410354614,
+                        1.4909234046936035,
                         1
                       ]
                     }
@@ -8757,21 +8650,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.63219714164733887,
+                        -0.70512467622756958,
                         0,
-                        -0.36500084400177002,
+                        0.1889377236366272,
                         0,
                         0,
                         0.73000001907348633,
                         0,
                         0,
-                        0.36500084400177002,
+                        -0.1889377236366272,
                         0,
-                        -0.63219714164733887,
+                        -0.70512467622756958,
                         0,
-                        -0.23090256750583649,
-                        0.60302203893661499,
-                        1.1406817436218262,
+                        0.62123715877532959,
+                        0.60302191972732544,
+                        1.474062442779541,
                         1
                       ]
                     }
@@ -8947,21 +8840,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        3.5930819511413574,
+                        2.5398173332214355,
                         0,
-                        0,
-                        0,
-                        0,
-                        3.5930819511413574,
-                        0,
-                        0,
+                        2.5415670871734619,
                         0,
                         0,
                         3.5930819511413574,
                         0,
-                        -0.1205771341919899,
-                        0.84148514270782471,
-                        -1.167055606842041,
+                        0,
+                        -2.5415670871734619,
+                        0,
+                        2.5398173332214355,
+                        0,
+                        0.60925775766372681,
+                        0.84148508310317993,
+                        -1.4101985692977905,
                         1
                       ]
                     }
@@ -9170,21 +9063,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.44731640815734863,
+                        -0.63238281011581421,
                         0,
-                        -0.44700837135314941,
+                        0.00021904920868109912,
                         0,
                         0,
                         0.63238340616226196,
                         0,
                         0,
-                        0.44700837135314941,
+                        -0.00021904920868109912,
                         0,
-                        -0.44731640815734863,
+                        -0.63238281011581421,
                         0,
-                        -0.42429900169372559,
+                        0.67198550701141357,
                         0,
-                        1.4058463573455811,
+                        1.7983137369155884,
                         1
                       ]
                     }
@@ -9284,108 +9177,7 @@
                       ]
                     }
                   },
-                  "C1975EC7-2D07-4064-B9B6-8CF1A12A5270" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "item",
-                          {
-                            "typeName" : "String",
-                            "value" : "End Table"
-                          }
-                        ],
-                        [
-                          "material",
-                          {
-                            "typeName" : "String",
-                            "value" : "plastic"
-                          }
-                        ],
-                        [
-                          "materialColor",
-                          {
-                            "typeName" : "double4",
-                            "value" : [
-                              0,
-                              0,
-                              0,
-                              1
-                            ]
-                          }
-                        ],
-                        [
-                          "style",
-                          {
-                            "typeName" : "String",
-                            "value" : "Realistic"
-                          }
-                        ]
-                      ],
-                      "children" : {
-                        "iconicItem" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "7EFB308B-425D-4DEA-96AD-3F7ACBA45C59"
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "item" : {
-                          "overrides" : {
-                            "factory" : null,
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "46498733-25EF-4A14-B9D1-C44332F43B5C"
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.EndTable.6f06c10f-c9e4-4b61-8b73-26a8a28c16b9",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "8CC61E12-1B5F-40FD-885F-C96DB51C29F1"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        -0.70710670948028564,
-                        0,
-                        -0.70710641145706177,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                        0.70710641145706177,
-                        0,
-                        -0.70710670948028564,
-                        0,
-                        1.6583560705184937,
-                        0,
-                        0.88726377487182617,
-                        1
-                      ]
-                    }
-                  },
+                  "C1975EC7-2D07-4064-B9B6-8CF1A12A5270" : null,
                   "CFD235F8-0917-4493-8751-D183C5270BE6" : {
                     "overrides" : {
                       "arguments" : [
@@ -9427,21 +9219,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.61065393686294556,
-                        -0.18893684446811676,
-                        -0.35256093740463257,
+                        -0.68109524250030518,
+                        -0.18893678486347198,
+                        0.18250061571598053,
                         0,
-                        0.36499699950218201,
-                        7.2228685894515365e-06,
-                        -0.63219773769378662,
+                        -0.18894080817699432,
+                        7.3098913162539247e-06,
+                        -0.70512270927429199,
                         0,
-                        0.16362819075584412,
-                        -0.7051236629486084,
-                        0.094462059438228607,
+                        0.18249721825122833,
+                        -0.70512348413467407,
+                        -0.048908207565546036,
                         0,
-                        -0.20639333128929138,
-                        0.76991057395935059,
-                        1.0657696723937988,
+                        0.58559679985046387,
+                        0.76991045475006104,
+                        1.4037609100341797,
                         1
                       ]
                     }
@@ -9524,26 +9316,33 @@
                             "typeName" : "UUID",
                             "value" : "83F43D54-A615-4CF1-BE84-FF848E736062"
                           }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Photos Table"
+                          }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        0.7071068286895752,
+                        -1.6689293715899112e-06,
                         0,
-                        -0.70710629224777222,
+                        -0.99999946355819702,
                         0,
                         0,
                         1,
                         0,
                         0,
-                        0.70710629224777222,
+                        0.99999946355819702,
                         0,
-                        0.7071068286895752,
+                        -1.6689293715899112e-06,
                         0,
-                        -0.19574913382530212,
+                        0.65718370676040649,
                         0,
-                        1.1563644409179688,
+                        1.4602944850921631,
                         1
                       ]
                     }
@@ -9627,136 +9426,38 @@
                             "typeName" : "UUID",
                             "value" : "C11EAB5B-1C7B-4947-B61D-6660A0CB464D"
                           }
+                        ],
+                        [
+                          "entityName",
+                          {
+                            "typeName" : "String",
+                            "value" : "Computer Table"
+                          }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        0.70710688829421997,
+                        0.9999997615814209,
                         0,
-                        -0.70710653066635132,
+                        1.3374933871546091e-07,
                         0,
                         0,
                         1,
                         0,
                         0,
-                        0.70710653066635132,
+                        -1.3374933871546091e-07,
                         0,
-                        0.70710688829421997,
+                        0.9999997615814209,
                         0,
-                        1.6693519353866577,
+                        1.6693516969680786,
                         0,
-                        -0.83847671747207642,
+                        -0.0058682560920715332,
                         1
                       ]
                     }
                   },
-                  "F779AB40-6F29-472F-9C31-77C9DBFE8F0A" : {
-                    "overrides" : {
-                      "children" : {
-                        "USDScene" : {
-                          "overrides" : {
-                            "arguments" : [
-                              [
-                                "includeSceneScaling",
-                                {
-                                  "typeName" : "Bool",
-                                  "value" : false
-                                }
-                              ],
-                              [
-                                "subpath",
-                                {
-                                  "typeName" : "String",
-                                  "value" : ""
-                                }
-                              ],
-                              [
-                                "url",
-                                {
-                                  "typeName" : "String",
-                                  "value" : "model:9c9764fa49d8d1bdd273b7160677b338\/monitor.usdz"
-                                }
-                              ],
-                              [
-                                "withDescendants",
-                                {
-                                  "typeName" : "Bool",
-                                  "value" : true
-                                }
-                              ]
-                            ],
-                            "factory" : {
-                              "identifier" : "com.apple.af.FileImportAssetFactory",
-                              "version" : "0.0"
-                            },
-                            "runtimeAttributes" : [
-                              [
-                                "RuntimeIdentifier",
-                                {
-                                  "typeName" : "UUID",
-                                  "value" : "F8A225F6-FA74-48C7-A3E6-CE87FD8E17C8"
-                                }
-                              ]
-                            ]
-                          },
-                          "transform" : {
-                            "matrix" : [
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              0.0099999997764825821,
-                              0,
-                              0,
-                              0,
-                              0,
-                              1
-                            ]
-                          }
-                        }
-                      },
-                      "factory" : {
-                        "identifier" : "com.apple.af.Group",
-                        "version" : "0.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "0BEDC3CC-CB7A-45D2-8CDF-76C68BAD6EDA"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        2.0497996807098389,
-                        0,
-                        2.1359323909564409e-07,
-                        0,
-                        0,
-                        2.0497996807098389,
-                        0,
-                        0,
-                        -2.1359323909564409e-07,
-                        0,
-                        2.0497996807098389,
-                        0,
-                        1.6491703987121582,
-                        0.75264734029769897,
-                        0.8209725022315979,
-                        1
-                      ]
-                    }
-                  },
+                  "F779AB40-6F29-472F-9C31-77C9DBFE8F0A" : null,
                   "FCC2EFE4-124D-4E49-8BAE-8F016589ED71" : {
                     "overrides" : {
                       "arguments" : [
@@ -9798,21 +9499,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.51618647575378418,
+                        -0.72999900579452515,
                         0,
-                        -0.51618850231170654,
+                        -2.1569546149180496e-08,
                         0,
                         0,
                         0.73000001907348633,
                         0,
                         0,
-                        0.51618850231170654,
+                        2.1569546149180496e-08,
                         0,
-                        -0.51618647575378418,
+                        -0.72999900579452515,
                         0,
-                        -0.17069403827190399,
-                        0.6025736927986145,
-                        1.2247354984283447,
+                        0.72324597835540771,
+                        0.60257357358932495,
+                        1.4909231662750244,
                         1
                       ]
                     }
@@ -9858,21 +9559,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        -0.63059020042419434,
+                        -0.70333266258239746,
                         0,
-                        -0.36407333612442017,
+                        0.18845725059509277,
                         0,
                         0,
                         0.7281486988067627,
                         0,
                         0,
-                        0.36407342553138733,
+                        -0.18845726549625397,
                         0,
-                        -0.63059037923812866,
+                        -0.70333272218704224,
                         0,
-                        -0.16183324158191681,
-                        0.60241276025772095,
-                        1.2902061939239502,
+                        0.77580642700195312,
+                        0.6024126410484314,
+                        1.5309524536132812,
                         1
                       ]
                     }
@@ -9893,21 +9594,21 @@
               "title" : "disk",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.85564059019088745,
-                  -1.8068783447233727e-07,
-                  -0.51757049560546875,
+                  -0.64385873079299927,
+                  -1.7336245150545437e-07,
+                  -0.76514440774917603,
                   0,
-                  -0.19660034775733948,
-                  0.92504703998565674,
-                  -0.32501739263534546,
+                  -0.34036743640899658,
+                  0.89560979604721069,
+                  0.28641432523727417,
                   0,
-                  0.47877717018127441,
-                  0.37985244393348694,
-                  0.79150772094726562,
+                  0.68527078628540039,
+                  0.44484043121337891,
+                  -0.57664632797241211,
                   0,
-                  2.0546646118164062,
-                  1.4615389108657837,
-                  2.1161575317382812,
+                  2.4946563243865967,
+                  1.7667974233627319,
+                  -2.3088688850402832,
                   1
                 ],
                 "sceneTransform" : [
@@ -9941,7 +9642,86 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "D6C6BB29-9772-49CC-A797-933895886090"
+                                          ],
+                                          "userIdentifier" : "Approach Photos Exit Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "CB63ED18-81EA-458F-8E21-34A9B3D3805F",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "FDCE479C-AF71-4357-A0EB-C4400E8006F7",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.86274510622024536,
+                        0.3333333432674408,
+                        0.41568627953529358,
+                        1
+                      ],
+                      "identifier" : "AD7A7B86-52A3-4FAE-82D0-882C80C2CB34",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Photos Exit Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "D6C6BB29-9772-49CC-A797-933895886090"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "5B4262F4-99A9-4A6F-9DB8-6E0E81970B86",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -11361,9 +11141,9 @@
                   0.49532395601272583,
                   0.5443497896194458,
                   0,
-                  1.8740208148956299,
-                  1.8888951539993286,
-                  1.6193087100982666,
+                  3.2527320384979248,
+                  1.723275899887085,
+                  2.1652004718780518,
                   1
                 ],
                 "sceneTransform" : [
@@ -11397,7 +11177,86 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "004C32F1-DB99-44B1-80A3-6C9632CADDB0"
+                                          ],
+                                          "userIdentifier" : "Approach Desktop Exit Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "9FDBDC86-5AD8-47AB-B667-B2B39CF65C9E",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "E7F69DE9-96F8-4E2D-A247-59BB22303065",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.86274510622024536,
+                        0.3333333432674408,
+                        0.41568627953529358,
+                        1
+                      ],
+                      "identifier" : "22A9068A-5F31-4654-B791-1B4F9807F64D",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Desktop Exit Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "004C32F1-DB99-44B1-80A3-6C9632CADDB0"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "BF4E92DD-C241-4EA6-8A7F-5192CBFEEEF7",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -12601,9 +12460,9 @@
                   0.43848073482513428,
                   0.4796622097492218,
                   0,
-                  2.4320180416107178,
-                  2.0384938716888428,
-                  1.4982479810714722,
+                  3.0666050910949707,
+                  1.1757283210754395,
+                  1.2814171314239502,
                   1
                 ],
                 "sceneTransform" : [
@@ -12637,7 +12496,86 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "6E328E99-C5D6-47A0-A5A9-88B2B93132B3"
+                                          ],
+                                          "userIdentifier" : "Approach Web Exit Table"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "9425744D-2684-4CCD-9BD9-5DED0F9D7D80",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "4160F666-8621-4027-ACD1-8C4C4B89CCD9",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.86274510622024536,
+                        0.3333333432674408,
+                        0.41568627953529358,
+                        1
+                      ],
+                      "identifier" : "4C96239C-838F-4BF7-A4DC-73D929EBD9AA",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Approach Web Exit Table",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "distance" : 1,
+                                  "target" : [
+                                    "6E328E99-C5D6-47A0-A5A9-88B2B93132B3"
+                                  ],
+                                  "type" : 0
+                                },
+                                "name" : "proximity"
+                              },
+                              "identifier" : "34196934-0821-4058-91A7-0B902BF77036",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,

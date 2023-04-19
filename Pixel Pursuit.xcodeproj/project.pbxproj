@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA7F439F29EFB27F0043F793 /* DecryptDiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */; };
+		AA7F43A129EFC5F40043F793 /* AccessServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A029EFC5F40043F793 /* AccessServerView.swift */; };
+		AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */; };
+		AA7F43A829EFD67A0043F793 /* TimesNewRomanBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */; };
+		AA7F43A929EFD67A0043F793 /* TimesNewRomanBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */; };
+		AA7F43AA29EFD67A0043F793 /* TimesNewRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */; };
+		AA7F43AB29EFD67A0043F793 /* TimesNewRomanItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */; };
+		AA7F43AD29EFDCE50043F793 /* Clair de Lune.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */; };
+		AA7F43AF29EFDE050043F793 /* FinaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43AE29EFDE050043F793 /* FinaleView.swift */; };
 		AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */; };
 		AAB0823329EF262B008E0D2C /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0823229EF262B008E0D2C /* Dialogue.swift */; };
 		AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */; };
@@ -46,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptDiskView.swift; sourceTree = "<group>"; };
+		AA7F43A029EFC5F40043F793 /* AccessServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessServerView.swift; sourceTree = "<group>"; };
+		AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSwitchView.swift; sourceTree = "<group>"; };
+		AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanBoldItalic.ttf; sourceTree = "<group>"; };
+		AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanBold.ttf; sourceTree = "<group>"; };
+		AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRoman.ttf; sourceTree = "<group>"; };
+		AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanItalic.ttf; sourceTree = "<group>"; };
+		AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Clair de Lune.mp3"; sourceTree = "<group>"; };
+		AA7F43AE29EFDE050043F793 /* FinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinaleView.swift; sourceTree = "<group>"; };
 		AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneID.swift; sourceTree = "<group>"; };
 		AAB0823229EF262B008E0D2C /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
 		AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,10 +181,14 @@
 			isa = PBXGroup;
 			children = (
 				AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */,
+				AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */,
 				AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */,
 				AAF3D09829EE6E4500AF8774 /* BootupView.swift */,
 				AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */,
 				AAF3D0AF29EE713E00AF8774 /* GameView.swift */,
+				AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */,
+				AA7F43A029EFC5F40043F793 /* AccessServerView.swift */,
+				AA7F43AE29EFDE050043F793 /* FinaleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */,
+				AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */,
+				AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */,
+				AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */,
+				AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -192,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
+				AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */,
 			);
 			path = "Music & Sound Effects";
 			sourceTree = "<group>";
@@ -317,8 +344,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7F43A829EFD67A0043F793 /* TimesNewRomanBoldItalic.ttf in Resources */,
 				AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */,
+				AA7F43A929EFD67A0043F793 /* TimesNewRomanBold.ttf in Resources */,
+				AA7F43AA29EFD67A0043F793 /* TimesNewRoman.ttf in Resources */,
 				AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */,
+				AA7F43AB29EFD67A0043F793 /* TimesNewRomanItalic.ttf in Resources */,
+				AA7F43AD29EFDCE50043F793 /* Clair de Lune.mp3 in Resources */,
 				AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */,
 				AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */,
 			);
@@ -350,11 +382,15 @@
 				AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */,
 				AAB0823329EF262B008E0D2C /* Dialogue.swift in Sources */,
 				AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */,
+				AA7F43AF29EFDE050043F793 /* FinaleView.swift in Sources */,
 				AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */,
 				AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */,
+				AA7F43A129EFC5F40043F793 /* AccessServerView.swift in Sources */,
 				AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */,
+				AA7F439F29EFB27F0043F793 /* DecryptDiskView.swift in Sources */,
 				AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */,
 				AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */,
+				AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */,
 				AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */,
 				AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */,
 			);

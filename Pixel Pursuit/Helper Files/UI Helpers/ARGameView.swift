@@ -13,6 +13,7 @@ import ARKit
 struct ARGameView: UIViewRepresentable {
     
     var scene: ARSceneID
+    @Binding var actionButtonMessage: String
     
     /// Generates the view for first use.
     /// - Parameter context: The system-provided context.
@@ -21,7 +22,48 @@ struct ARGameView: UIViewRepresentable {
         
         // Present AR coaching!
         let arView = ARView(frame: .zero)
-        arView.addCoaching()
+        
+        switch scene {
+        case .coaching:
+            arView.addCoaching()
+        case .diskTable:
+            arView.showDiskTableScene()
+        case .office:
+            arView.showOfficeScene()
+        case .disk:
+            
+            // Transitioning is done here due to use of actionButtonMessage!
+            // First, load the scene!
+            let diskSceneAnchor = try! PixelPursuit.loadDisk()
+            
+            // Add behavior handlers!
+            diskSceneAnchor.actions.approachPhotosTable.onAction = { _ in
+                actionButtonMessage = "view photos"
+            }
+            diskSceneAnchor.actions.approachDesktopTable.onAction = { _ in
+                actionButtonMessage = "view desktop"
+            }
+            diskSceneAnchor.actions.approachWebTable.onAction = { _ in
+                actionButtonMessage = "view web history"
+            }
+            diskSceneAnchor.actions.approachComputerTable.onAction = { _ in
+                actionButtonMessage = "access server"
+            }
+            
+            arView.scene.anchors.removeAll()
+            arView.scene.addAnchor(diskSceneAnchor)
+            ARsceneID = .disk
+            
+        case .photos:
+            arView.showPhotosScene()
+        case .desktop:
+            arView.showDesktopScene()
+        case .webHistory:
+            arView.showWebScene()
+        case .secretServer:
+            arView.showServerScene()
+        }
+        
         return arView
     }
     
@@ -36,15 +78,12 @@ extension ARView: ARCoachingOverlayViewDelegate {
         
         // Create the overlay!
         let coachingOverlay = ARCoachingOverlayView()
-        coachingOverlay.autoresizingMask = [
-            .flexibleWidth, .flexibleHeight
-        ]
-        coachingOverlay.activatesAutomatically = true
         
-        // Coaching settings!
-        coachingOverlay.goal = .horizontalPlane
-        coachingOverlay.session = self.session
         coachingOverlay.delegate = self
+        coachingOverlay.session = self.session
+        coachingOverlay.goal = .horizontalPlane
+        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        coachingOverlay.setActive(true, animated: true)
         
         // Bang! Present it!
         self.addSubview(coachingOverlay)
@@ -70,5 +109,33 @@ extension ARView {
         scene.anchors.removeAll()
         scene.addAnchor(try! PixelPursuit.loadOffice())
         ARsceneID = .office
+    }
+    
+    /// Transitions the view to the photos scene.
+    func showPhotosScene() {
+        scene.anchors.removeAll()
+        scene.addAnchor(try! PixelPursuit.loadPhotos())
+        ARsceneID = .photos
+    }
+    
+    /// Transitions the view to the desktop scene.
+    func showDesktopScene() {
+        scene.anchors.removeAll()
+        scene.addAnchor(try! PixelPursuit.loadDesktop())
+        ARsceneID = .desktop
+    }
+    
+    /// Transitions the view to the web scene.
+    func showWebScene() {
+        scene.anchors.removeAll()
+        scene.addAnchor(try! PixelPursuit.loadHistory())
+        ARsceneID = .webHistory
+    }
+    
+    /// Transitions the view to the server scene.
+    func showServerScene() {
+        scene.anchors.removeAll()
+        scene.addAnchor(try! PixelPursuit.loadServer())
+        ARsceneID = .secretServer
     }
 }
