@@ -23,6 +23,8 @@ struct ARInstructionsView: View {
                 .overlay(Color.red.opacity(0.5))
                 .frame(height: 0)
                 .opacity(0.1)
+                .scaleEffect(1.2)
+                .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 0) {
                 HStack(spacing: 200) {
@@ -58,11 +60,20 @@ struct ARInstructionsView: View {
                     .font(robotoMonoFont(25))
                     .multilineTextAlignment(.center)
                 
-                Text("Before activating, please ensure you have a floor space suitable for large AR activities - good luck! :)")
+                Text("Before activating, please ensure you have a floor space suitable for medium-to-large(ish) augmented reality activities - good luck! :)")
                     .font(robotoMonoFont(25))
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
+                    .padding(.top)
+                
+                Text("AR SCANNING TIP: Look at the space you want to play in, then walk there after the game environment has loaded!")
+                    .foregroundColor(.red)
+                    .font(robotoMonoFont(25))
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .padding(.top, 30)
                 
                 Spacer()
                 
@@ -101,6 +112,10 @@ struct ARInstructionsView: View {
         }
         .onAppear {
             playAudio(fileName: "static sound effect", type: "mp3")
+        }
+        .onDisappear() {
+            stopAudio()
+            playAudio(fileName: "Retro Funk", type: "mp3")
         }
     }
     

@@ -20,7 +20,7 @@ struct ARGameView: UIViewRepresentable {
     /// - Returns: An `ARView` to use in SwiftUI.
     func makeUIView(context: Context) -> ARView {
         
-        // Present AR coaching!
+        // Create an AR view!
         let arView = ARView(frame: .zero)
         
         switch scene {
@@ -99,8 +99,11 @@ extension ARView: ARCoachingOverlayViewDelegate {
 extension ARView {
     /// Transitions the view to the disk table scene.
     func showDiskTableScene() {
+        // Get the anchor!
+        let diskTableSceneAnchor = try! PixelPursuit.loadDisktable()
+        
         scene.anchors.removeAll()
-        scene.addAnchor(try! PixelPursuit.loadDisktable())
+        scene.addAnchor(diskTableSceneAnchor)
         ARsceneID = .diskTable
     }
     
@@ -130,6 +133,7 @@ extension ARView {
         scene.anchors.removeAll()
         scene.addAnchor(try! PixelPursuit.loadHistory())
         ARsceneID = .webHistory
+        try! PixelPursuitIconic.loadHistory()
     }
     
     /// Transitions the view to the server scene.

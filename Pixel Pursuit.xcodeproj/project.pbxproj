@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA60149B29F05E0D007BDAA3 /* Retro Funk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */; };
 		AA7F439F29EFB27F0043F793 /* DecryptDiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */; };
 		AA7F43A129EFC5F40043F793 /* AccessServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A029EFC5F40043F793 /* AccessServerView.swift */; };
 		AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */; };
@@ -18,6 +19,7 @@
 		AA7F43AF29EFDE050043F793 /* FinaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43AE29EFDE050043F793 /* FinaleView.swift */; };
 		AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */; };
 		AAB0823329EF262B008E0D2C /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0823229EF262B008E0D2C /* Dialogue.swift */; };
+		AAEFAF0B29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */; };
 		AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */; };
 		AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */; };
 		AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */; };
@@ -55,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Retro Funk.mp3"; sourceTree = "<group>"; };
 		AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptDiskView.swift; sourceTree = "<group>"; };
 		AA7F43A029EFC5F40043F793 /* AccessServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessServerView.swift; sourceTree = "<group>"; };
 		AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSwitchView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		AA7F43AE29EFDE050043F793 /* FinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinaleView.swift; sourceTree = "<group>"; };
 		AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneID.swift; sourceTree = "<group>"; };
 		AAB0823229EF262B008E0D2C /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
+		AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit Iconic.rcproject"; sourceTree = "<group>"; };
 		AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPursuitApp.swift; sourceTree = "<group>"; };
 		AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */,
 				AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */,
 				AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */,
+				AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */,
 				AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */,
 				AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */,
 				AAB0823229EF262B008E0D2C /* Dialogue.swift */,
@@ -219,6 +224,7 @@
 			children = (
 				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
 				AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */,
+				AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */,
 			);
 			path = "Music & Sound Effects";
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA60149B29F05E0D007BDAA3 /* Retro Funk.mp3 in Resources */,
 				AA7F43A829EFD67A0043F793 /* TimesNewRomanBoldItalic.ttf in Resources */,
 				AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */,
 				AA7F43A929EFD67A0043F793 /* TimesNewRomanBold.ttf in Resources */,
@@ -391,6 +398,7 @@
 				AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */,
 				AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */,
 				AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */,
+				AAEFAF0B29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject in Sources */,
 				AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */,
 				AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */,
 			);

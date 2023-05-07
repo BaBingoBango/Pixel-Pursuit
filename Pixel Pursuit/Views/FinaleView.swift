@@ -12,6 +12,8 @@ struct FinaleView: View {
     
     // MARK: View Variables
     @State var showingFinalMessage = false
+    let allOpacityTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State var allOpacity = 0.0
     
     // MARK: View Body
     var body: some View {
@@ -104,10 +106,14 @@ struct FinaleView: View {
                 }
             }
         }
+        .opacity(allOpacity)
         .padding(.all)
         .onAppear {
             // Play Clair de Lune again! ❤️
             playAudio(fileName: "Clair de Lune", type: "mp3")
+        }
+        .onReceive(allOpacityTimer) { _ in
+            allOpacity += 0.01
         }
     }
     
