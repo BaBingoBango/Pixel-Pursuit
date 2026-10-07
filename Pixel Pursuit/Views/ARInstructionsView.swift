@@ -83,7 +83,7 @@ struct ARInstructionsView: View {
                 .padding()
                 .padding(.top)
 
-            Text("AR SCANNING TIP: Look at the space you want to play in, then walk there after the game environment has loaded!")
+            Text("AR TIP: Once the floor scan finishes, point at some open floor and tap to place the scene. MOVE SCENE lets you put it somewhere else any time!")
                 .foregroundStyle(.red)
                 .font(.robotoMono(25))
                 .fontWeight(.bold)
