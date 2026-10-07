@@ -29,6 +29,7 @@ Open `Pixel Pursuit.xcodeproj` in Xcode 27 or later and run the **Pixel Pursuit*
   - `Views/` – one view per phase of the game, from the power switch to the finale.
   - `AR/` – the RealityKit view and the loader for `Pixel Pursuit.reality`.
   - `Support/` – fonts, audio, logos, and the animated static background.
+  - `AppIcon.icon` – the app icon as an Icon Composer package: the I.D.D.A. seal split into Liquid Glass layers (sparkles, ring, globe, pixels) over a near-black gradient. Open it in Icon Composer to tweak glass, translucency, or the per-appearance fills.
   - `Pixel Pursuit.reality` – the compiled Reality Composer scenes the game loads.
 - `Reality Composer Projects/` – the editable `.rcproject` sources for the AR scenes. Current versions of Xcode can't compile these any more, so to change a scene, open the project in Reality Composer on iPad and export a new `Pixel Pursuit.reality`. The bundled file was built from `Pixel Pursuit Iconic`, which uses the stylized "iconic" look of Reality Composer's object library and weighs about 22 MB. `Pixel Pursuit` is the photorealistic variant: its export comes out around 410 MB, which is over GitHub's file size limit, so it isn't checked in. To ship it, export it from Reality Composer and replace `Pixel Pursuit/Pixel Pursuit.reality` before archiving. `Pixel Pursuit Reduced` is a trimmed-down experiment.
 - `Pixel Pursuit.swiftpm/` – the Swift Playgrounds app package exactly as it was submitted to the Swift Student Challenge, kept for posterity.
