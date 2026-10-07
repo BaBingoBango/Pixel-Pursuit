@@ -18,10 +18,12 @@ struct ARInstructionsView: View {
         ZStack {
             AnimatedImageView(assetName: "staticGIF")
                 .overlay(Color.red.opacity(0.5))
-                .opacity(0.1)
+                .opacity(0.1 * contentOpacity)
                 .scaleEffect(1.2)
                 .ignoresSafeArea()
 
+            // The fade is applied inside `warning` rather than to this container: the scrolling fallback is
+            // UIKit-backed, and UIKit ignores taps on a view while its opacity animates.
             ViewThatFits(in: .vertical) {
                 warning
                 ScrollView {
@@ -29,10 +31,9 @@ struct ARInstructionsView: View {
                 }
             }
             .padding()
-            .border(.red, width: 3)
+            .border(.red.opacity(contentOpacity), width: 3)
         }
         .padding()
-        .opacity(contentOpacity)
         .onAppear {
             GameAudio.playLooping("static sound effect")
             withAnimation(.linear(duration: 10)) {
@@ -115,6 +116,7 @@ struct ARInstructionsView: View {
             }
             .padding(.bottom)
         }
+        .opacity(contentOpacity)
     }
 }
 

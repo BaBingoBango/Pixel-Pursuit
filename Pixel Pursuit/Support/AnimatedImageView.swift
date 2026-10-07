@@ -10,44 +10,57 @@ import SwiftUI
 import UIKit
 
 /// Plays an animated GIF stored as a data set in the asset catalog, filling whatever space it's given.
-struct AnimatedImageView: UIViewRepresentable {
+///
+/// This is plain SwiftUI on purpose: a UIKit-backed view inside a fading container would stop taking taps
+/// while the fade animates, which is exactly where this background is used.
+struct AnimatedImageView: View {
     /// The name of the data set in the asset catalog.
     let assetName: String
 
-    func makeUIView(context: Context) -> UIImageView {
-        let imageView = UIImageView(image: UIImage.animatedGIF(named: assetName))
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.isAccessibilityElement = false
-        return imageView
-    }
+    @State private var animation: GIFAnimation?
 
-    func updateUIView(_ uiView: UIImageView, context: Context) {}
-
-    func sizeThatFits(_ proposal: ProposedViewSize, uiView: UIImageView, context: Context) -> CGSize? {
-        // Fill the proposed space rather than reporting the image's own size.
-        proposal.replacingUnspecifiedDimensions()
+    var body: some View {
+        TimelineView(.animation(minimumInterval: animation?.frameDuration ?? 1)) { context in
+            if let animation {
+                let elapsed = context.date.timeIntervalSinceReferenceDate
+                let frame = Int(elapsed / animation.frameDuration) % animation.frames.count
+                Image(uiImage: animation.frames[frame])
+                    .resizable()
+                    .scaledToFill()
+                    .accessibilityHidden(true)
+            } else {
+                Color.clear
+            }
+        }
+        .task {
+            animation = GIFAnimation(assetName: assetName)
+        }
     }
 }
 
-extension UIImage {
-    /// Decodes an animated GIF from a data set in the asset catalog, keeping the GIF's frame timing.
-    static func animatedGIF(named assetName: String) -> UIImage? {
+/// The frames of a GIF and how long each one is on screen.
+struct GIFAnimation {
+    let frames: [UIImage]
+    let frameDuration: TimeInterval
+
+    /// Decodes a GIF from a data set in the asset catalog. GIFs can time each frame differently; this keeps
+    /// the first frame's timing for all of them, which is exact for the game's evenly timed static.
+    init?(assetName: String) {
         guard let asset = NSDataAsset(name: assetName),
               let source = CGImageSourceCreateWithData(asset.data as CFData, nil) else {
             return nil
         }
 
         var frames: [UIImage] = []
-        var duration: TimeInterval = 0
         for index in 0..<CGImageSourceGetCount(source) {
-            guard let frame = CGImageSourceCreateImageAtIndex(source, index, nil) else { continue }
-            frames.append(UIImage(cgImage: frame))
-            duration += frameDelay(in: source, at: index)
+            if let frame = CGImageSourceCreateImageAtIndex(source, index, nil) {
+                frames.append(UIImage(cgImage: frame))
+            }
         }
-
         guard !frames.isEmpty else { return nil }
-        return UIImage.animatedImage(with: frames, duration: duration)
+
+        self.frames = frames
+        self.frameDuration = Self.frameDelay(in: source, at: 0)
     }
 
     private static func frameDelay(in source: CGImageSource, at index: Int) -> TimeInterval {
