@@ -16,18 +16,20 @@ final class PlaythroughUITests: XCTestCase {
 
     @MainActor
     func testPlayThroughToAmandasDisk() throws {
-        XCUIDevice.shared.orientation = .landscapeLeft
+        // Portrait on purpose: on a rotated simulator, XCUITest's synthesized taps miss controls away from the
+        // screen's center, and the HUD buttons live in the corners.
+        XCUIDevice.shared.orientation = .portrait
         let app = XCUIApplication()
         app.launch()
 
         let powerButton = app.buttons["Main power on"]
         XCTAssertTrue(powerButton.waitForExistence(timeout: 5))
-        powerButton.tap()
+        tapOnceVisible(powerButton)
 
         // Initializing and bootup play out on their own, about three seconds each.
         let activateButton = app.buttons["ACTIVATE SYSTEM"]
         XCTAssertTrue(activateButton.waitForExistence(timeout: 20))
-        activateButton.tap()
+        tapOnceVisible(activateButton)
 
         // The disk table scene loads and the mission interface comes online.
         let advanceButton = app.buttons["tap to advance text"]
@@ -66,5 +68,13 @@ final class PlaythroughUITests: XCTestCase {
         advanceButton.tap()
         advanceButton.tap()
         XCTAssertTrue(app.staticTexts["If you can find anything on that, we'll be golden!"].waitForExistence(timeout: 5))
+    }
+
+    /// The title and warning screens fade in over several seconds, and a tap on a nearly transparent view
+    /// goes nowhere, so give a freshly appeared button a moment before tapping it.
+    @MainActor
+    private func tapOnceVisible(_ button: XCUIElement) {
+        sleep(1)
+        button.tap()
     }
 }
