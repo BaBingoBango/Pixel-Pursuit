@@ -20,7 +20,6 @@ struct FinaleView: View {
             }
         }
         .padding()
-        .opacity(contentOpacity)
         .onAppear {
             // Play Clair de Lune again! ❤️
             GameAudio.playLooping("Clair de Lune")
@@ -30,6 +29,8 @@ struct FinaleView: View {
         }
     }
 
+    // The fade lives on the content rather than on the container above: its scrolling fallback is
+    // UIKit-backed, and UIKit ignores taps on a view while its opacity animates.
     private var content: some View {
         VStack {
             if !isShowingFinalMessage {
@@ -80,6 +81,7 @@ struct FinaleView: View {
                 }
             }
         }
+        .opacity(contentOpacity)
     }
 
     private func verdictButton(_ title: String) -> some View {

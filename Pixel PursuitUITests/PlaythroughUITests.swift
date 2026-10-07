@@ -16,9 +16,7 @@ final class PlaythroughUITests: XCTestCase {
 
     @MainActor
     func testPlayThroughToAmandasDisk() throws {
-        // Portrait on purpose: on a rotated simulator, XCUITest's synthesized taps miss controls away from the
-        // screen's center, and the HUD buttons live in the corners.
-        XCUIDevice.shared.orientation = .portrait
+        XCUIDevice.shared.orientation = .landscapeLeft
         let app = XCUIApplication()
         app.launch()
 

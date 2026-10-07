@@ -23,7 +23,6 @@ struct PowerSwitchView: View {
             }
         }
         .padding(.horizontal)
-        .opacity(contentOpacity)
         .onAppear {
             // Play Clair de Lune! ❤️
             GameAudio.playLooping("Clair de Lune")
@@ -38,6 +37,8 @@ struct PowerSwitchView: View {
         }
     }
 
+    // The fade lives on the content rather than on the container above: its scrolling fallback is
+    // UIKit-backed, and UIKit ignores taps on a view while its opacity animates.
     private var content: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("computer forensics")
@@ -99,6 +100,7 @@ struct PowerSwitchView: View {
                 .padding(.leading)
             }
         }
+        .opacity(contentOpacity)
     }
 }
 
