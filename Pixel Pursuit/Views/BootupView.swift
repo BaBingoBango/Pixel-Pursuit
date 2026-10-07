@@ -1,18 +1,47 @@
 //
-//  IntroView.swift
-//  Mission Overflow
+//  BootupView.swift
+//  Pixel Pursuit
 //
 //  Created by Ethan Marshall on 4/2/23.
 //
 
 import SwiftUI
 
-/// Sets the scene of the game with a imagery of a computer booting up.
+/// Sets the scene with the imagery of a computer booting up: a boot log races past over a faint I.D.D.A. logo.
 struct BootupView: View {
-    
-    // MARK: View Variables
-    /// Bootup text to display in the view line-by-line.
-    @State var startupText = """
+    /// The part of the boot log that has appeared so far.
+    @State private var visibleLines: [String] = []
+
+    var body: some View {
+        ZStack {
+            LogoView(logo: .iddaLogo)
+                .frame(maxWidth: 500)
+                .opacity(0.1)
+
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading) {
+                    ForEach(Array(visibleLines.enumerated()), id: \.offset) { _, line in
+                        Text(line)
+                            .foregroundStyle(.red)
+                            .font(.robotoMono(10))
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .defaultScrollAnchor(.bottom)
+            .defaultScrollAnchor(.bottom, for: .sizeChanges)
+        }
+        .task {
+            for line in Self.bootLog {
+                visibleLines.append(line)
+                try? await Task.sleep(for: .milliseconds(1))
+                if Task.isCancelled { return }
+            }
+        }
+    }
+
+    /// Boot log text to display in the view line by line.
+    private static let bootLog: [String] = """
     BOOTING I.D.D.A. SYSTEM ALPHA
     Starting udev:                                             [  OK  ]
     Setting hostname elwood:                                   [  OK  ]
@@ -91,8 +120,8 @@ struct BootupView: View {
     STARTING ASTERISK
     Asterisk Started
     Stopping fail2ban: REST Applications module is not licensed.
-    &gt; ucp-server@ start /var/www/html/admin/modules/ucpnode/node
-    &gt; node_modules/forever/bin/forever start -m 1 -a -l $ASTLOGDIR/ucp_forever.log -o $ASTLOGDIR/ucp_out.log -e $ASTLOGDIR/ucp_err.log --uid 'ucp' ind
+    > ucp-server@ start /var/www/html/admin/modules/ucpnode/node
+    > node_modules/forever/bin/forever start -m 1 -a -l $ASTLOGDIR/ucp_forever.log -o $ASTLOGDIR/ucp_out.log -e $ASTLOGDIR/ucp_err.log --uid 'ucp' ind
     ex.js
     warn:    --minUptime not set. Defaulting to: 1000ms
     warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
@@ -168,7 +197,7 @@ struct BootupView: View {
     NAND device id: 2c 64 44 4b a9 0 0 0
     detect NAND device: B revision NAND 8GiB MT29F64G08CBABA
     AML_NAND_NEW_OOB : new oob
-    bus_cycle=5, bus_timing=7,system=3.9ns,flash-&gt;T_REA =16,flash-&gt;T_RHOH=15
+    bus_cycle=5, bus_timing=7,system=3.9ns,flash->T_REA =16,flash->T_RHOH=15
     NAND CKECK  : arg nbbt: arg_valid= 1, valid_blk_addr = 5, valid_page_addr = 0
     NAND CKECK  : arg ncnf: arg_valid= 1, valid_blk_addr = 8, valid_page_addr = 0
     NAND CKECK  : arg nkey: arg_valid= 1, valid_blk_addr = 4, valid_page_addr = 0
@@ -259,73 +288,8 @@ struct BootupView: View {
     starting communication subystem ... OK
     starting GUI ...
     """.components(separatedBy: "\n")
-    /// A timer which triggers more text to appear on-screen.
-    let startupTextUpdateTimer = Timer.publish(every: 0.001, on: .main, in: .common).autoconnect()
-    /// The part of the bootup text that is currently showing on-screen.
-    @State var showingStartupText: [String] = []
-    
-    // MARK: View Body
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(.red)
-                .mask(
-                    Image("IDDA logo")
-                        .resizable()
-                )
-                .aspectRatio(1, contentMode: .fit)
-                .frame(width: 500)
-                .opacity(0.1)
-            
-            VStack {
-                Spacer()
-                
-                HStack {
-                    ScrollView(showsIndicators: false) {
-                        ScrollViewReader { scrollViewReader in
-                            VStack {
-                                Spacer()
-                                
-                                ForEach(showingStartupText, id: \.self) { eachTextLine in
-                                    HStack {
-                                        Text(eachTextLine)
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(.red)
-                                            .font(robotoMonoFont(10))
-                                            .id(eachTextLine)
-                                        
-                                        Spacer()
-                                    }
-                                }
-                            }
-                            .onChange(of: showingStartupText.count) { _ in
-                                scrollViewReader.scrollTo(showingStartupText.last)
-                            }
-                        }
-                    }
-                    
-                    Spacer()
-                }
-            }
-        }
-        .onReceive(startupTextUpdateTimer) { _ in
-            if !startupText.isEmpty {
-                showingStartupText.append(startupText.remove(at: 0))
-            }
-        }
-    }
-    
-    // MARK: View Functions
-    // Functions go here! :)
 }
 
-// MARK: View Preview
-struct BootupView_Previews: PreviewProvider {
-    static var previews: some View {
-        BootupView()
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
+#Preview(traits: .landscapeLeft) {
+    BootupView()
 }
-
-// MARK: Support Views
-// Support views go here! :)

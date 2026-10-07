@@ -1,135 +1,123 @@
 //
 //  ARInstructionsView.swift
-//  Mission Overflow
+//  Pixel Pursuit
 //
 //  Created by Ethan Marshall on 4/2/23.
 //
 
 import SwiftUI
 
-/// An app view written in SwiftUI!
+/// The I.D.D.A.'s system access warning, which doubles as the instructions for setting up the AR play space.
 struct ARInstructionsView: View {
-    
-    // MARK: View Variables
-    let opacityTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    @State var viewOpacity = 0.0
-    @Binding var sceneCode: Int
-    
-    // MARK: View Body
+    /// Called when the player activates the system.
+    let onActivate: () -> Void
+
+    @State private var contentOpacity = 0.0
+
     var body: some View {
         ZStack {
-            GIFView(gifName: "staticGIF")
-                .aspectRatio(contentMode: .fill)
+            AnimatedImageView(assetName: "staticGIF")
                 .overlay(Color.red.opacity(0.5))
-                .frame(height: 0)
                 .opacity(0.1)
                 .scaleEffect(1.2)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 0) {
-                HStack(spacing: 200) {
-                    Rectangle()
-                        .foregroundColor(.red)
-                        .mask(
-                            Image("IDDA logo")
-                                .resizable()
-                        )
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding()
-                        .frame(width: 200)
-                    
-                    Rectangle()
-                        .foregroundColor(.red)
-                        .mask(
-                            Image("EOT logo")
-                                .resizable()
-                        )
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding()
-                        .frame(width: 200)
+                .ignoresSafeArea()
+
+            ViewThatFits(in: .vertical) {
+                warning
+                ScrollView {
+                    warning
                 }
-                
-                Text("System Access Warning".uppercased())
-                    .foregroundColor(.red)
-                    .font(robotoMonoFont(75))
-                    .multilineTextAlignment(.center)
-                
-                Spacer()
-                
-                Text("This is a system for investigating cyber crimes. Only authorized IDDA agents and approved contractors are allowed to access it, under penalty of international law.")
-                    .font(robotoMonoFont(25))
-                    .multilineTextAlignment(.center)
-                
-                Text("Before activating, please ensure you have a floor space suitable for medium-to-large(ish) augmented reality activities - good luck! :)")
-                    .font(robotoMonoFont(25))
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .padding(.top)
-                
-                Text("AR SCANNING TIP: Look at the space you want to play in, then walk there after the game environment has loaded!")
-                    .foregroundColor(.red)
-                    .font(robotoMonoFont(25))
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .padding(.top, 30)
-                
-                Spacer()
-                
-                HStack {
-                    Text(">>>")
-                        .font(robotoMonoFont(50))
-                        .foregroundColor(.red)
-                    
-                    Button(action: {
-                        sceneCode += 1
-                    }) {
-                        ZStack {
-                            Rectangle()
-                                .foregroundColor(.red)
-                                .frame(width: 352, height: 75)
-                            
-                            Text("Activate System".uppercased())
-                                .font(robotoMonoFont(30))
-                                .foregroundColor(.black)
-                        }
-                    }
-                    
-                    Text("<<<")
-                        .font(robotoMonoFont(50))
-                        .foregroundColor(.red)
-                }
-                .padding(.bottom)
             }
             .padding()
             .border(.red, width: 3)
         }
         .padding()
-        .opacity(viewOpacity)
-        .onReceive(opacityTimer) { _ in
-            viewOpacity += 0.01
-        }
+        .opacity(contentOpacity)
         .onAppear {
-            playAudio(fileName: "static sound effect", type: "mp3")
+            GameAudio.playLooping("static sound effect")
+            withAnimation(.linear(duration: 10)) {
+                contentOpacity = 1
+            }
         }
-        .onDisappear() {
-            stopAudio()
-            playAudio(fileName: "Retro Funk", type: "mp3")
+        .onDisappear {
+            // The game is starting: swap the static for the investigation's soundtrack.
+            GameAudio.stop()
+            GameAudio.playLooping("Retro Funk")
         }
     }
-    
-    // MARK: View Functions
-    // Functions go here! :)
-}
 
-// MARK: View Preview
-struct ARInstructionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ARInstructionsView(sceneCode: .constant(3))
-            .previewInterfaceOrientation(.landscapeLeft)
+    private var warning: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Spacer()
+
+                LogoView(logo: .iddaLogo)
+                    .padding()
+                    .frame(maxWidth: 200)
+
+                Spacer(minLength: 20)
+                    .frame(maxWidth: 200)
+
+                LogoView(logo: .eotLogo)
+                    .padding()
+                    .frame(maxWidth: 200)
+
+                Spacer()
+            }
+
+            Text("System Access Warning".uppercased())
+                .foregroundStyle(.red)
+                .font(.robotoMono(75))
+                .multilineTextAlignment(.center)
+
+            Spacer()
+
+            Text("This is a system for investigating cyber crimes. Only authorized IDDA agents and approved contractors are allowed to access it, under penalty of international law.")
+                .font(.robotoMono(25))
+                .multilineTextAlignment(.center)
+
+            Text("Before activating, please ensure you have a floor space suitable for medium-to-large(ish) augmented reality activities - good luck! :)")
+                .font(.robotoMono(25))
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding()
+                .padding(.top)
+
+            Text("AR SCANNING TIP: Look at the space you want to play in, then walk there after the game environment has loaded!")
+                .foregroundStyle(.red)
+                .font(.robotoMono(25))
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding()
+                .padding(.top, 30)
+
+            Spacer()
+
+            HStack {
+                Text(">>>")
+                    .font(.robotoMono(50))
+                    .foregroundStyle(.red)
+
+                Button(action: onActivate) {
+                    Text("Activate System".uppercased())
+                        .font(.robotoMono(30))
+                        .foregroundStyle(.black)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                        .frame(maxWidth: 352)
+                        .frame(height: 75)
+                        .background(Color.red)
+                }
+
+                Text("<<<")
+                    .font(.robotoMono(50))
+                    .foregroundStyle(.red)
+            }
+            .padding(.bottom)
+        }
     }
 }
 
-// MARK: Support Views
-// Support views go here! :)
+#Preview(traits: .landscapeLeft) {
+    ARInstructionsView(onActivate: {})
+}

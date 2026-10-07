@@ -1,54 +1,48 @@
 //
 //  DispatchView.swift
-//  Mission Overflow
+//  Pixel Pursuit
 //
 //  Created by Ethan Marshall on 4/2/23.
 //
 
 import SwiftUI
 
-/// The root view for the app. It dispatches out to all other views!
+/// The root view. It shows whichever phase of the game the player is in and moves between them.
 struct DispatchView: View {
-    
-    // MARK: View Variables
-    @State var sceneCode = 0
-    let viewSwitchTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    
-    // MARK: View Body
+    @State private var phase = GamePhase.powerSwitch
+
     var body: some View {
-        Group {
-            if sceneCode == 0 {
-                PowerSwitchView(sceneCode: $sceneCode)
-            } else if sceneCode == 1 {
-                InitalizingView()
-            } else if sceneCode == 2 {
+        ZStack {
+            switch phase {
+            case .powerSwitch:
+                PowerSwitchView(onPowerOn: advance)
+            case .initializing:
+                InitializingView()
+            case .bootup:
                 BootupView()
-            } else if sceneCode == 3 {
-                ARInstructionsView(sceneCode: $sceneCode)
-            } else if sceneCode == 4 {
-                GameView(sceneCode: $sceneCode)
-            } else {
+            case .arInstructions:
+                ARInstructionsView(onActivate: advance)
+            case .game:
+                GameView(onFinished: advance)
+            case .finale:
                 FinaleView()
             }
         }
-        .onReceive(viewSwitchTimer) { _ in
-            if sceneCode >= 1 && sceneCode <= 2 {
-                sceneCode += 1
+        .task(id: phase) {
+            // The "powering on" phases play out on their own; everything else waits for the player.
+            guard phase.advancesAutomatically else { return }
+            try? await Task.sleep(for: .seconds(3))
+            if !Task.isCancelled {
+                advance()
             }
         }
     }
-    
-    // MARK: View Functions
-    // Functions go here! :)
-}
 
-// MARK: View Preview
-struct DispatchView_Previews: PreviewProvider {
-    static var previews: some View {
-        DispatchView()
-            .previewInterfaceOrientation(.landscapeLeft)
+    private func advance() {
+        phase = phase.next
     }
 }
 
-// MARK: Support Views
-// Support views go here! :)
+#Preview(traits: .landscapeLeft) {
+    DispatchView()
+}

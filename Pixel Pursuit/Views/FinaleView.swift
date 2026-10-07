@@ -7,126 +7,96 @@
 
 import SwiftUI
 
-/// An app view written in SwiftUI!
+/// The end of the investigation: the player gives their verdict and gets a thank-you note.
 struct FinaleView: View {
-    
-    // MARK: View Variables
-    @State var showingFinalMessage = false
-    let allOpacityTimer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    @State var allOpacity = 0.0
-    
-    // MARK: View Body
+    @State private var isShowingFinalMessage = false
+    @State private var contentOpacity = 0.0
+
     var body: some View {
+        ViewThatFits(in: .vertical) {
+            content
+            ScrollView {
+                content
+            }
+        }
+        .padding()
+        .opacity(contentOpacity)
+        .onAppear {
+            // Play Clair de Lune again! ❤️
+            GameAudio.playLooping("Clair de Lune")
+            withAnimation(.linear(duration: 10)) {
+                contentOpacity = 1
+            }
+        }
+    }
+
+    private var content: some View {
         VStack {
-            if !showingFinalMessage {
+            if !isShowingFinalMessage {
                 HStack {
                     Text("IDDA Agent:")
-                        .font(timesNewRomanFont(45))
+                        .font(.timesNewRoman(45))
                         .fontWeight(.bold)
-                    
+
                     Spacer()
                 }
-                
+
                 HStack {
                     Text("In your expert opinion, what do you think in the case of Amanda Becker?")
-                        .font(timesNewRomanFont(35))
+                        .font(.timesNewRoman(35))
                         .italic()
-                    
+
                     Spacer()
                 }
                 .padding(.bottom, 30)
-                
-                Button(action: {
-                    showingFinalMessage = true
-                }) {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.red)
-                            .frame(width: 350, height: 75)
-                        
-                        Text("GUILTY!")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .font(robotoMonoFont(25))
-                    }
-                }
-                
-                Button(action: {
-                    showingFinalMessage = true
-                }) {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.red)
-                            .frame(width: 350, height: 75)
-                        
-                        Text("NOT GUILTY!")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .font(robotoMonoFont(25))
-                    }
-                }
-                
-                Button(action: {
-                    showingFinalMessage = true
-                }) {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(.red)
-                            .frame(width: 350, height: 75)
-                        
-                        Text("IT'S COMPLICATED...")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .font(robotoMonoFont(25))
-                    }
-                }
+
+                // Whatever the player chooses, the ending is the same: the point is that it's complicated.
+                verdictButton("GUILTY!")
+                verdictButton("NOT GUILTY!")
+                verdictButton("IT'S COMPLICATED...")
             } else {
                 HStack {
                     Text("Whatever you chose, computer forensics is a complicated field. While investigators don't actually do the convicting, the responsibility is great and a little scary...")
-                        .font(timesNewRomanFont(35))
+                        .font(.timesNewRoman(35))
                         .italic()
-                    
+
                     Spacer()
                 }
-                
+
                 Text("THANKS FOR\nPLAYING!")
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.red)
-                    .font(timesNewRomanFont(85))
+                    .foregroundStyle(.red)
+                    .font(.timesNewRoman(85))
                     .fontWeight(.bold)
                     .padding(.vertical, 30)
-                
+
                 HStack {
                     Text("- IDDA Headquarters, Amanda, and Me! :)\n\nHappy WWDC!")
-                        .font(timesNewRomanFont(35))
+                        .font(.timesNewRoman(35))
                         .italic()
-                        .foregroundColor(.red)
-                    
+                        .foregroundStyle(.red)
+
                     Spacer()
                 }
             }
         }
-        .opacity(allOpacity)
-        .padding(.all)
-        .onAppear {
-            // Play Clair de Lune again! ❤️
-            playAudio(fileName: "Clair de Lune", type: "mp3")
-        }
-        .onReceive(allOpacityTimer) { _ in
-            allOpacity += 0.01
-        }
     }
-    
-    // MARK: View Functions
-    // Functions go here! :)
-}
 
-// MARK: View Preview
-struct FinaleView_Previews: PreviewProvider {
-    static var previews: some View {
-        FinaleView()
+    private func verdictButton(_ title: String) -> some View {
+        Button {
+            isShowingFinalMessage = true
+        } label: {
+            Text(title)
+                .foregroundStyle(.white)
+                .fontWeight(.bold)
+                .font(.robotoMono(25))
+                .frame(maxWidth: 350)
+                .frame(height: 75)
+                .background(Color.red)
+        }
     }
 }
 
-// MARK: Support Views
-// Support views go here! :)
+#Preview(traits: .landscapeLeft) {
+    FinaleView()
+}

@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Build output
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/xcode/xcuserdata/
+.build/
+
+# AI assistant configuration (local only)
+AGENTS.md
+CLAUDE.md
+.claude/
+.mcp.json
+
+# Photorealistic Reality Composer export: 410 MB, over GitHub's file size limit (see README)
+Reality Composer Projects/Pixel Pursuit - Realistic.reality

@@ -7,122 +7,113 @@
 
 import SwiftUI
 
-/// An app view written in SwiftUI!
+/// Amanda's web browser. The player enters the secret server's address and passcode from the clues on her disk.
 struct AccessServerView: View {
-    
-    // MARK: View Variables
-    @Binding var chatCode: Int
-    @Binding var objectiveMessage: String
-    @Binding var actionButtonMessage: String
-    @SwiftUI.Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var themeColor = Color.blue
-    @State var enteredSiteName = ""
-    @State var enteredPassword = ""
-    @State var hasGottenInformationWrong = false
-    
-    // MARK: View Body
+    @Binding var chatIndex: Int
+    @Binding var objective: String
+    @Binding var action: GameAction?
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var themeColor = Color.blue
+    @State private var enteredSiteName = ""
+    @State private var enteredPasscode = ""
+    @State private var hasGottenInformationWrong = false
+
     var body: some View {
         VStack {
             Text("↓ swipe to dismiss ↓")
-                .font(robotoMonoFont(25))
+                .font(.robotoMono(25))
                 .fontWeight(.bold)
-                .foregroundColor(themeColor)
+                .foregroundStyle(themeColor)
                 .padding(.top)
-            
+
             Spacer()
-            
+
             Text("🌎 cool web browser 2000! 🌏")
                 .font(.title)
-                .foregroundColor(.cyan)
+                .foregroundStyle(.cyan)
                 .fontWeight(.bold)
                 .padding(.bottom)
-            
-            Text(!hasGottenInformationWrong ? "Navigate To Server!" : "Hmm...maybe try something else?")
-                .font(robotoMonoFont(30))
+
+            Text(hasGottenInformationWrong ? "Hmm...maybe try something else?" : "Navigate To Server!")
+                .font(.robotoMono(30))
                 .fontWeight(.bold)
-                .foregroundColor(themeColor)
-            
-            HStack {
-                Text("DOMAIN NAME")
-                    .font(robotoMonoFont(17.5))
-                    .foregroundColor(themeColor)
-                Spacer()
-            }
-            .padding([.leading, .top])
-            
+                .foregroundStyle(themeColor)
+
+            fieldLabel("DOMAIN NAME")
+
             TextField("example.com", text: $enteredSiteName)
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled(true)
-                .font(robotoMonoFont(30))
-                .fontWeight(.bold)
-                .foregroundColor(themeColor)
-                .textFieldStyle(PlainTextFieldStyle())
-                .padding()
-                .border(themeColor, width: 4)
-                .padding(.horizontal)
-            
-            HStack {
-                Text("4-DIGIT PASSCODE")
-                    .font(robotoMonoFont(17.5))
-                    .foregroundColor(themeColor)
-                Spacer()
-            }
-            .padding([.leading, .top])
-            
-            TextField("0000", text: $enteredPassword)
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled(true)
-                .font(robotoMonoFont(30))
-                .fontWeight(.bold)
-                .foregroundColor(themeColor)
-                .textFieldStyle(PlainTextFieldStyle())
-                .padding()
-                .border(themeColor, width: 4)
-                .padding(.horizontal)
-            
-            Button(action: {
-                // Check if the password is right!
-                if enteredSiteName.lowercased() == "nothingtoseehere.net" && enteredPassword.lowercased() == "4231" {
-                    
-                    // If it is, dismiss and change to the next scene
-                    themeColor = .green
-                    chatCode = 4
-                    objectiveMessage = "Listen to Agent W\nfor instructions."
-                    actionButtonMessage = "tap to advance text"
-                    presentationMode.wrappedValue.dismiss()
-                } else {
-                    
-                    // Oops! Wrong answer!
-                    hasGottenInformationWrong = true
-                }
-            }) {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(themeColor)
-                        .frame(width: 250, height: 75)
-                    
-                    Text("GO!")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(robotoMonoFont(25))
-                }
+                .keyboardType(.URL)
+                .modifier(BrowserFieldStyle(themeColor: themeColor))
+                .accessibilityLabel("Domain name")
+
+            fieldLabel("4-DIGIT PASSCODE")
+
+            TextField("0000", text: $enteredPasscode)
+                .submitLabel(.go)
+                .onSubmit(navigateToServer)
+                .modifier(BrowserFieldStyle(themeColor: themeColor))
+                .accessibilityLabel("Four-digit passcode")
+
+            Button(action: navigateToServer) {
+                Text("GO!")
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.robotoMono(25))
+                    .frame(width: 250, height: 75)
+                    .background(themeColor)
             }
             .padding(.top)
-            
+
             Spacer()
         }
     }
-    
-    // MARK: View Functions
-    // Functions go here! :)
-}
 
-// MARK: View Preview
-struct AccessServerView_Previews: PreviewProvider {
-    static var previews: some View {
-        AccessServerView(chatCode: .constant(0), objectiveMessage: .constant(""), actionButtonMessage: .constant(""))
+    private func fieldLabel(_ title: String) -> some View {
+        HStack {
+            Text(title)
+                .font(.robotoMono(17.5))
+                .foregroundStyle(themeColor)
+
+            Spacer()
+        }
+        .padding([.leading, .top])
+    }
+
+    private func navigateToServer() {
+        // The address came from Amanda's web history; the passcode from her desktop notes.
+        if enteredSiteName.lowercased() == "nothingtoseehere.net" && enteredPasscode.lowercased() == "4231" {
+            // We're in! Hand the player back to Agent W.
+            themeColor = .green
+            chatIndex = 4
+            objective = "Listen to Agent W\nfor instructions."
+            action = .advanceText
+            dismiss()
+        } else {
+            // Oops! Wrong answer!
+            hasGottenInformationWrong = true
+        }
     }
 }
 
-// MARK: Support Views
-// Support views go here! :)
+/// The boxed, monospaced look shared by the browser's text fields.
+private struct BrowserFieldStyle: ViewModifier {
+    let themeColor: Color
+
+    func body(content: Content) -> some View {
+        content
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled()
+            .font(.robotoMono(30))
+            .fontWeight(.bold)
+            .foregroundStyle(themeColor)
+            .textFieldStyle(.plain)
+            .padding()
+            .border(themeColor, width: 4)
+            .padding(.horizontal)
+    }
+}
+
+#Preview {
+    AccessServerView(chatIndex: .constant(0), objective: .constant(""), action: .constant(nil))
+}

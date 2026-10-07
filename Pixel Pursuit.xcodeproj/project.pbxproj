@@ -3,41 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		AA60149B29F05E0D007BDAA3 /* Retro Funk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */; };
-		AA7F439F29EFB27F0043F793 /* DecryptDiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */; };
-		AA7F43A129EFC5F40043F793 /* AccessServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A029EFC5F40043F793 /* AccessServerView.swift */; };
-		AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */; };
-		AA7F43A829EFD67A0043F793 /* TimesNewRomanBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */; };
-		AA7F43A929EFD67A0043F793 /* TimesNewRomanBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */; };
-		AA7F43AA29EFD67A0043F793 /* TimesNewRoman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */; };
-		AA7F43AB29EFD67A0043F793 /* TimesNewRomanItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */; };
-		AA7F43AD29EFDCE50043F793 /* Clair de Lune.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */; };
-		AA7F43AF29EFDE050043F793 /* FinaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F43AE29EFDE050043F793 /* FinaleView.swift */; };
-		AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */; };
-		AAB0823329EF262B008E0D2C /* Dialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0823229EF262B008E0D2C /* Dialogue.swift */; };
-		AAEFAF0B29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */; };
-		AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */; };
-		AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */; };
-		AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */; };
-		AAF3D07A29EE6A1C00AF8774 /* Pixel_PursuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */; };
-		AAF3D08429EE6A1C00AF8774 /* Pixel_PursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */; };
-		AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */; };
-		AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */; };
-		AAF3D09529EE6D2E00AF8774 /* ARGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */; };
-		AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09829EE6E4500AF8774 /* BootupView.swift */; };
-		AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */; };
-		AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09A29EE6E4500AF8774 /* GIFView.swift */; };
-		AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */; };
-		AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */; };
-		AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */; };
-		AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */; };
-		AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */; };
-		AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3D0AF29EE713E00AF8774 /* GameView.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AAF3D07629EE6A1C00AF8774 /* PBXContainerItemProxy */ = {
@@ -57,41 +24,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Retro Funk.mp3"; sourceTree = "<group>"; };
-		AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptDiskView.swift; sourceTree = "<group>"; };
-		AA7F43A029EFC5F40043F793 /* AccessServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessServerView.swift; sourceTree = "<group>"; };
-		AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSwitchView.swift; sourceTree = "<group>"; };
-		AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanBoldItalic.ttf; sourceTree = "<group>"; };
-		AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanBold.ttf; sourceTree = "<group>"; };
-		AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRoman.ttf; sourceTree = "<group>"; };
-		AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TimesNewRomanItalic.ttf; sourceTree = "<group>"; };
-		AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Clair de Lune.mp3"; sourceTree = "<group>"; };
-		AA7F43AE29EFDE050043F793 /* FinaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinaleView.swift; sourceTree = "<group>"; };
-		AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneID.swift; sourceTree = "<group>"; };
-		AAB0823229EF262B008E0D2C /* Dialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogue.swift; sourceTree = "<group>"; };
-		AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit Iconic.rcproject"; sourceTree = "<group>"; };
+		AA0000012B0000000000A006 /* Reality Composer Projects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Reality Composer Projects"; sourceTree = "<group>"; };
+		AA0000012B0000000000A007 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Pursuit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPursuitApp.swift; sourceTree = "<group>"; };
-		AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAF3D07529EE6A1C00AF8774 /* Pixel PursuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pixel PursuitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitTests.swift; sourceTree = "<group>"; };
 		AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pixel PursuitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITests.swift; sourceTree = "<group>"; };
-		AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixel_PursuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = "Pixel Pursuit.rcproject"; sourceTree = "<group>"; };
-		AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGameView.swift; sourceTree = "<group>"; };
-		AAF3D09829EE6E4500AF8774 /* BootupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootupView.swift; sourceTree = "<group>"; };
-		AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInstructionsView.swift; sourceTree = "<group>"; };
-		AAF3D09A29EE6E4500AF8774 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
-		AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchView.swift; sourceTree = "<group>"; };
-		AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalizingView.swift; sourceTree = "<group>"; };
-		AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RobotoMono.ttf; sourceTree = "<group>"; };
 		AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pixel-Pursuit-Info.plist"; sourceTree = SOURCE_ROOT; };
-		AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "static sound effect.mp3"; sourceTree = "<group>"; };
-		AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServices.swift; sourceTree = "<group>"; };
-		AAF3D0AF29EE713E00AF8774 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AA0000012B0000000000A001 /* Pixel Pursuit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pixel Pursuit";
+			sourceTree = "<group>";
+		};
+		AA0000012B0000000000A003 /* Pixel PursuitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pixel PursuitTests";
+			sourceTree = "<group>";
+		};
+		AA0000012B0000000000A004 /* Pixel PursuitUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Pixel PursuitUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AAF3D06029EE6A1B00AF8774 /* Frameworks */ = {
@@ -121,9 +78,12 @@
 		AAF3D05A29EE6A1B00AF8774 = {
 			isa = PBXGroup;
 			children = (
-				AAF3D06529EE6A1B00AF8774 /* Pixel Pursuit */,
-				AAF3D07829EE6A1C00AF8774 /* Pixel PursuitTests */,
-				AAF3D08229EE6A1C00AF8774 /* Pixel PursuitUITests */,
+				AA0000012B0000000000A001 /* Pixel Pursuit */,
+				AA0000012B0000000000A003 /* Pixel PursuitTests */,
+				AA0000012B0000000000A004 /* Pixel PursuitUITests */,
+				AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */,
+				AA0000012B0000000000A006 /* Reality Composer Projects */,
+				AA0000012B0000000000A007 /* README.md */,
 				AAF3D06429EE6A1B00AF8774 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,114 +96,6 @@
 				AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AAF3D06529EE6A1B00AF8774 /* Pixel Pursuit */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D0A329EE6F2400AF8774 /* Pixel-Pursuit-Info.plist */,
-				AAF3D06629EE6A1B00AF8774 /* PixelPursuitApp.swift */,
-				AAF3D09229EE6A3200AF8774 /* Pixel Pursuit.rcproject */,
-				AAEFAF0A29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject */,
-				AAF3D06C29EE6A1C00AF8774 /* Assets.xcassets */,
-				AAB0822E29EF17AC008E0D2C /* ARSceneID.swift */,
-				AAB0823229EF262B008E0D2C /* Dialogue.swift */,
-				AAF3D0A929EE706B00AF8774 /* Views */,
-				AAF3D0AA29EE709800AF8774 /* Helper Files */,
-				AAF3D0AB29EE70A700AF8774 /* Fonts */,
-				AAF3D0AC29EE70AC00AF8774 /* Music & Sound Effects */,
-				AAF3D06E29EE6A1C00AF8774 /* Preview Content */,
-			);
-			path = "Pixel Pursuit";
-			sourceTree = "<group>";
-		};
-		AAF3D06E29EE6A1C00AF8774 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D06F29EE6A1C00AF8774 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AAF3D07829EE6A1C00AF8774 /* Pixel PursuitTests */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D07929EE6A1C00AF8774 /* Pixel_PursuitTests.swift */,
-			);
-			path = "Pixel PursuitTests";
-			sourceTree = "<group>";
-		};
-		AAF3D08229EE6A1C00AF8774 /* Pixel PursuitUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D08329EE6A1C00AF8774 /* Pixel_PursuitUITests.swift */,
-				AAF3D08529EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift */,
-			);
-			path = "Pixel PursuitUITests";
-			sourceTree = "<group>";
-		};
-		AAF3D0A929EE706B00AF8774 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D09B29EE6E4500AF8774 /* DispatchView.swift */,
-				AA7F43A229EFD6340043F793 /* PowerSwitchView.swift */,
-				AAF3D09C29EE6E4500AF8774 /* InitalizingView.swift */,
-				AAF3D09829EE6E4500AF8774 /* BootupView.swift */,
-				AAF3D09929EE6E4500AF8774 /* ARInstructionsView.swift */,
-				AAF3D0AF29EE713E00AF8774 /* GameView.swift */,
-				AA7F439E29EFB27F0043F793 /* DecryptDiskView.swift */,
-				AA7F43A029EFC5F40043F793 /* AccessServerView.swift */,
-				AA7F43AE29EFDE050043F793 /* FinaleView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		AAF3D0AA29EE709800AF8774 /* Helper Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D0AE29EE70C400AF8774 /* Data Helpers */,
-				AAF3D0AD29EE70BF00AF8774 /* UI Helpers */,
-			);
-			path = "Helper Files";
-			sourceTree = "<group>";
-		};
-		AAF3D0AB29EE70A700AF8774 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D0A229EE6F1200AF8774 /* RobotoMono.ttf */,
-				AA7F43A429EFD6790043F793 /* TimesNewRomanBoldItalic.ttf */,
-				AA7F43A529EFD6790043F793 /* TimesNewRomanBold.ttf */,
-				AA7F43A729EFD67A0043F793 /* TimesNewRomanItalic.ttf */,
-				AA7F43A629EFD67A0043F793 /* TimesNewRoman.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		AAF3D0AC29EE70AC00AF8774 /* Music & Sound Effects */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D0A429EE6F5500AF8774 /* static sound effect.mp3 */,
-				AA7F43AC29EFDCE50043F793 /* Clair de Lune.mp3 */,
-				AA60149A29F05E0D007BDAA3 /* Retro Funk.mp3 */,
-			);
-			path = "Music & Sound Effects";
-			sourceTree = "<group>";
-		};
-		AAF3D0AD29EE70BF00AF8774 /* UI Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D09429EE6D2E00AF8774 /* ARGameView.swift */,
-				AAF3D09A29EE6E4500AF8774 /* GIFView.swift */,
-			);
-			path = "UI Helpers";
-			sourceTree = "<group>";
-		};
-		AAF3D0AE29EE70C400AF8774 /* Data Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				AAF3D0A629EE6F6000AF8774 /* AudioServices.swift */,
-			);
-			path = "Data Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +113,12 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				AA0000012B0000000000A001 /* Pixel Pursuit */,
+			);
 			name = "Pixel Pursuit";
+			packageProductDependencies = (
+			);
 			productName = "Pixel Pursuit";
 			productReference = AAF3D06329EE6A1B00AF8774 /* Pixel Pursuit.app */;
 			productType = "com.apple.product-type.application";
@@ -279,7 +136,12 @@
 			dependencies = (
 				AAF3D07729EE6A1C00AF8774 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				AA0000012B0000000000A003 /* Pixel PursuitTests */,
+			);
 			name = "Pixel PursuitTests";
+			packageProductDependencies = (
+			);
 			productName = "Pixel PursuitTests";
 			productReference = AAF3D07529EE6A1C00AF8774 /* Pixel PursuitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -297,7 +159,12 @@
 			dependencies = (
 				AAF3D08129EE6A1C00AF8774 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				AA0000012B0000000000A004 /* Pixel PursuitUITests */,
+			);
 			name = "Pixel PursuitUITests";
+			packageProductDependencies = (
+			);
 			productName = "Pixel PursuitUITests";
 			productReference = AAF3D07F29EE6A1C00AF8774 /* Pixel PursuitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -309,8 +176,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					AAF3D06229EE6A1B00AF8774 = {
 						CreatedOnToolsVersion = 14.3;
@@ -326,7 +193,6 @@
 				};
 			};
 			buildConfigurationList = AAF3D05E29EE6A1B00AF8774 /* Build configuration list for PBXProject "Pixel Pursuit" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -334,6 +200,8 @@
 				Base,
 			);
 			mainGroup = AAF3D05A29EE6A1B00AF8774;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = AAF3D06429EE6A1B00AF8774 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,16 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA60149B29F05E0D007BDAA3 /* Retro Funk.mp3 in Resources */,
-				AA7F43A829EFD67A0043F793 /* TimesNewRomanBoldItalic.ttf in Resources */,
-				AAF3D0A829EE6F9800AF8774 /* RobotoMono.ttf in Resources */,
-				AA7F43A929EFD67A0043F793 /* TimesNewRomanBold.ttf in Resources */,
-				AA7F43AA29EFD67A0043F793 /* TimesNewRoman.ttf in Resources */,
-				AAF3D0A529EE6F5500AF8774 /* static sound effect.mp3 in Resources */,
-				AA7F43AB29EFD67A0043F793 /* TimesNewRomanItalic.ttf in Resources */,
-				AA7F43AD29EFDCE50043F793 /* Clair de Lune.mp3 in Resources */,
-				AAF3D07029EE6A1C00AF8774 /* Preview Assets.xcassets in Resources */,
-				AAF3D06D29EE6A1C00AF8774 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,23 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF3D0A029EE6E4500AF8774 /* DispatchView.swift in Sources */,
-				AAF3D09529EE6D2E00AF8774 /* ARGameView.swift in Sources */,
-				AAF3D0A729EE6F6000AF8774 /* AudioServices.swift in Sources */,
-				AAB0823329EF262B008E0D2C /* Dialogue.swift in Sources */,
-				AAF3D06729EE6A1B00AF8774 /* PixelPursuitApp.swift in Sources */,
-				AA7F43AF29EFDE050043F793 /* FinaleView.swift in Sources */,
-				AAF3D0B029EE713E00AF8774 /* GameView.swift in Sources */,
-				AAF3D09E29EE6E4500AF8774 /* ARInstructionsView.swift in Sources */,
-				AA7F43A129EFC5F40043F793 /* AccessServerView.swift in Sources */,
-				AAF3D09D29EE6E4500AF8774 /* BootupView.swift in Sources */,
-				AA7F439F29EFB27F0043F793 /* DecryptDiskView.swift in Sources */,
-				AAB0822F29EF17AC008E0D2C /* ARSceneID.swift in Sources */,
-				AAF3D09F29EE6E4500AF8774 /* GIFView.swift in Sources */,
-				AA7F43A329EFD6340043F793 /* PowerSwitchView.swift in Sources */,
-				AAEFAF0B29F08CE600F34BA1 /* Pixel Pursuit Iconic.rcproject in Sources */,
-				AAF3D0A129EE6E4500AF8774 /* InitalizingView.swift in Sources */,
-				AAF3D09329EE6A3200AF8774 /* Pixel Pursuit.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF3D07A29EE6A1C00AF8774 /* Pixel_PursuitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF3D08629EE6A1C00AF8774 /* Pixel_PursuitUITestsLaunchTests.swift in Sources */,
-				AAF3D08429EE6A1C00AF8774 /* Pixel_PursuitUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -470,10 +309,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -487,13 +328,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -501,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -530,10 +378,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -541,12 +391,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -568,13 +424,12 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,8 +440,10 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -608,13 +465,12 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,8 +481,10 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -634,19 +492,18 @@
 		AAF3D08D29EE6A1C00AF8774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GUDZ7ALN9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixel Pursuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pixel Pursuit";
 			};
 			name = Debug;
@@ -654,19 +511,18 @@
 		AAF3D08E29EE6A1C00AF8774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GUDZ7ALN9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pixel Pursuit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pixel Pursuit";
 			};
 			name = Release;
@@ -674,17 +530,17 @@
 		AAF3D09029EE6A1C00AF8774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GUDZ7ALN9J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_TARGET_NAME = "Pixel Pursuit";
 			};
 			name = Debug;
@@ -692,17 +548,17 @@
 		AAF3D09129EE6A1C00AF8774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GUDZ7ALN9J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Marshall.Pixel-PursuitUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
 				TEST_TARGET_NAME = "Pixel Pursuit";
 			};
 			name = Release;

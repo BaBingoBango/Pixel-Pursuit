@@ -7,94 +7,82 @@
 
 import SwiftUI
 
-/// An app view written in SwiftUI!
+/// Amanda's login screen. The player types the disk password they found in her office.
 struct DecryptDiskView: View {
-    
-    // MARK: View Variables
-    @Binding var chatCode: Int
-    @Binding var objectiveMessage: String
-    @Binding var actionButtonMessage: String
-    @SwiftUI.Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var themeColor = Color.red
-    @State var enteredPassword = ""
-    @State var hasGottenPasswordWrong = false
-    
-    // MARK: View Body
+    @Binding var chatIndex: Int
+    @Binding var objective: String
+    @Binding var action: GameAction?
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var themeColor = Color.red
+    @State private var enteredPassword = ""
+    @State private var hasGottenPasswordWrong = false
+
     var body: some View {
         VStack {
             Text("↓ swipe to dismiss ↓")
-                .font(robotoMonoFont(25))
+                .font(.robotoMono(25))
                 .fontWeight(.bold)
-                .foregroundColor(themeColor)
+                .foregroundStyle(themeColor)
                 .padding(.top)
-            
+
             Spacer()
-            
+
             Text("💕 amanda's computer 💕")
                 .font(.title)
-                .foregroundColor(.pink)
+                .foregroundStyle(.pink)
                 .fontWeight(.bold)
                 .padding(.bottom)
-            
-            Text(!hasGottenPasswordWrong ? "ENTER DISK PASSWORD:" : "INCORRECT! PLEASE TRY AGAIN!")
-                .font(robotoMonoFont(30))
+
+            Text(hasGottenPasswordWrong ? "INCORRECT! PLEASE TRY AGAIN!" : "ENTER DISK PASSWORD:")
+                .font(.robotoMono(30))
                 .fontWeight(.bold)
-                .foregroundColor(themeColor)
-            
+                .foregroundStyle(themeColor)
+
             TextField("", text: $enteredPassword)
                 .textInputAutocapitalization(.never)
-                .autocorrectionDisabled(true)
-                .font(robotoMonoFont(30))
+                .autocorrectionDisabled()
+                .submitLabel(.go)
+                .onSubmit(submitPassword)
+                .font(.robotoMono(30))
                 .fontWeight(.bold)
-                .foregroundColor(themeColor)
-                .textFieldStyle(PlainTextFieldStyle())
+                .foregroundStyle(themeColor)
+                .textFieldStyle(.plain)
                 .padding()
                 .border(themeColor, width: 4)
                 .padding(.horizontal)
-            
-            Button(action: {
-                // Check if the password is right!
-                if enteredPassword.lowercased() == "mike4neva" {
-                    
-                    // If it is, dismiss and change to the next scene
-                    themeColor = .green
-                    chatCode = 1
-                    objectiveMessage = "Listen to Agent W\nfor instructions."
-                    actionButtonMessage = "tap to advance text"
-                    presentationMode.wrappedValue.dismiss()
-                } else {
-                    
-                    // Oops! Wrong answer!
-                    hasGottenPasswordWrong = true
-                }
-            }) {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(themeColor)
-                        .frame(width: 250, height: 75)
-                    
-                    Text("SUBMIT")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(robotoMonoFont(25))
-                }
+                .accessibilityLabel("Disk password")
+
+            Button(action: submitPassword) {
+                Text("SUBMIT")
+                    .foregroundStyle(.white)
+                    .fontWeight(.bold)
+                    .font(.robotoMono(25))
+                    .frame(width: 250, height: 75)
+                    .background(themeColor)
             }
             .padding(.top)
-            
+
             Spacer()
         }
     }
-    
-    // MARK: View Functions
-    // Functions go here! :)
-}
 
-// MARK: View Preview
-struct DecryptDiskView_Previews: PreviewProvider {
-    static var previews: some View {
-        DecryptDiskView(chatCode: .constant(0), objectiveMessage: .constant(""), actionButtonMessage: .constant(""))
+    private func submitPassword() {
+        // Amanda left her password somewhere in her office. 💕
+        if enteredPassword.lowercased() == "mike4neva" {
+            // Unlocked! Hand the player back to Agent W.
+            themeColor = .green
+            chatIndex = 1
+            objective = "Listen to Agent W\nfor instructions."
+            action = .advanceText
+            dismiss()
+        } else {
+            // Oops! Wrong answer!
+            hasGottenPasswordWrong = true
+        }
     }
 }
 
-// MARK: Support Views
-// Support views go here! :)
+#Preview {
+    DecryptDiskView(chatIndex: .constant(0), objective: .constant(""), action: .constant(nil))
+}

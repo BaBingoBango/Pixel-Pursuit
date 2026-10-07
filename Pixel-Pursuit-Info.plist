@@ -4,11 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Fonts/RobotoMono.ttf</string>
-		<string>Fonts/TimesNewRoman.ttf</string>
-		<string>Fonts/TimesNewRomanItalic.ttf</string>
-		<string>Fonts/TimesNewRomanBold.ttf</string>
-		<string>Fonts/TimesNewRomanBoldItalic.ttf</string>
+		<string>RobotoMono.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
