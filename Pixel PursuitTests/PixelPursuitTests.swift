@@ -33,12 +33,9 @@ struct GameFlowTests {
         #expect(GamePhase.finale.next == .finale)
     }
 
-    @Test func proximityTriggersMapToActions() {
-        #expect(GameAction(notifyActionIdentifier: "Approach Photos Table") == .viewPhotos)
-        #expect(GameAction(notifyActionIdentifier: "Approach Desktop Table") == .viewDesktop)
-        #expect(GameAction(notifyActionIdentifier: "Approach Web Table") == .viewWebHistory)
-        #expect(GameAction(notifyActionIdentifier: "Approach Computer Table") == .accessServer)
-        #expect(GameAction(notifyActionIdentifier: "Approach Photos Exit Table") == nil)
+    @Test func everyTableOffersADifferentAction() {
+        #expect(GameAction.tableActions.count == 4)
+        #expect(Set(GameAction.tableActions.values).count == 4)
     }
 }
 
@@ -46,6 +43,14 @@ struct GameFlowTests {
 struct RealitySceneTests {
     @Test func realityFileIsBundled() {
         #expect(RealitySceneLoader.realityFileURL != nil)
+    }
+
+    /// The proximity triggers look the tables up by name, so the disk scene has to keep all four.
+    @Test func diskSceneHasEveryTable() async throws {
+        let anchor = try await RealitySceneLoader.loadAnchor(for: .disk)
+        for (tableName, action) in GameAction.tableActions {
+            #expect(anchor.findEntity(named: tableName) != nil, "\(tableName) (\(action)) is missing from the disk scene")
+        }
     }
 
     /// Every scene in the compiled Reality Composer file still loads with the current RealityKit, and keeps

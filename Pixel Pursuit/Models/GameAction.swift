@@ -22,15 +22,12 @@ nonisolated enum GameAction: String {
     case enterServer = "enter amanda's server"
     case exitServer = "exit server"
 
-    /// The action offered when the player walks up to a table in Amanda's disk, keyed by the
-    /// identifier of the "Notify" behavior that fires in the Reality Composer scene.
-    init?(notifyActionIdentifier identifier: String) {
-        switch identifier {
-        case "Approach Photos Table": self = .viewPhotos
-        case "Approach Desktop Table": self = .viewDesktop
-        case "Approach Web Table": self = .viewWebHistory
-        case "Approach Computer Table": self = .accessServer
-        default: return nil
-        }
-    }
+    /// The actions offered by walking up to the tables in Amanda's disk, keyed by each table's entity name
+    /// in the Reality Composer scene.
+    static let tableActions: [String: GameAction] = [
+        "Photos Table": .viewPhotos,
+        "Desktop Table": .viewDesktop,
+        "Web Table": .viewWebHistory,
+        "Computer Table": .accessServer
+    ]
 }

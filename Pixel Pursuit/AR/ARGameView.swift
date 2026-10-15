@@ -55,6 +55,10 @@ struct ARGameView: UIViewRepresentable {
 
     /// Owns everything that outlives a SwiftUI update: the AR session, coaching, placement, the loaded scene,
     /// and the proximity triggers in Amanda's disk.
+    ///
+    /// The Reality Composer scenes carry their own "approach" triggers, but those measure straight-line distance
+    /// from the camera to a table on the floor, which an iPad held at chest height rarely closes. The coordinator
+    /// measures distance across the floor instead.
     final class Coordinator: NSObject, @preconcurrency ARCoachingOverlayViewDelegate {
         var parent: ARGameView?
         weak var arView: ARView?
@@ -66,6 +70,15 @@ struct ARGameView: UIViewRepresentable {
         /// Where the player put the scene on the floor. Every scene shares it.
         private var placementTransform: simd_float4x4?
         private var isPlacing = false
+
+        /// The tables in Amanda's disk, with the action each one offers when the player walks up to it.
+        private var tables: [(action: GameAction, entity: Entity)] = []
+        /// The table the player is standing at, so each approach fires once.
+        private var tableInRange: GameAction?
+        /// How close across the floor counts as approaching a table.
+        private static let approachDistance: Float = 1.0
+        /// How far the player has to step back before a table can be approached again.
+        private static let departDistance: Float = 1.4
 
         private var loadTask: Task<Void, Never>?
         private var preloadTask: Task<Void, Never>?
@@ -81,19 +94,6 @@ struct ARGameView: UIViewRepresentable {
             disc.isEnabled = false
             return disc
         }()
-
-        /// Posted by RealityKit whenever a Reality Composer "Notify" behavior fires.
-        private static let notifyActionName = Notification.Name("RealityKit.NotifyAction")
-
-        override init() {
-            super.init()
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(handleNotifyAction(_:)),
-                name: Self.notifyActionName,
-                object: nil
-            )
-        }
 
         // MARK: - Session
 
@@ -111,6 +111,7 @@ struct ARGameView: UIViewRepresentable {
             arView.scene.addAnchor(reticleAnchor)
             frameSubscription = arView.scene.subscribe(to: SceneEvents.Update.self) { [weak self] _ in
                 self?.updateReticle()
+                self?.updateProximityTriggers()
             }
 
             let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
@@ -259,6 +260,7 @@ struct ARGameView: UIViewRepresentable {
                     }
                     arView.scene.addAnchor(anchor)
                     currentAnchor = anchor
+                    prepareProximityTriggers(in: anchor, for: scene)
                     parent?.presentedScene = scene
                 } catch {
                     logger.error("Couldn't load the \(scene.rawValue, privacy: .public) scene: \(String(describing: error), privacy: .public)")
@@ -274,16 +276,48 @@ struct ARGameView: UIViewRepresentable {
 
         // MARK: - Proximity triggers
 
-        @objc private func handleNotifyAction(_ notification: Notification) {
-            guard let parent, parent.scene == .disk,
-                  let arView,
-                  let userInfo = notification.userInfo,
-                  let scene = userInfo["RealityKit.NotifyAction.Scene"] as? RealityKit.Scene, scene === arView.scene,
-                  let identifier = userInfo["RealityKit.NotifyAction.Identifier"] as? String,
-                  let action = GameAction(notifyActionIdentifier: identifier) else {
+        private func prepareProximityTriggers(in anchor: AnchorEntity, for scene: ARSceneID) {
+            guard scene == .disk else {
+                tables = []
+                tableInRange = nil
                 return
             }
-            parent.action = action
+            tables = GameAction.tableActions.compactMap { name, action in
+                anchor.findEntity(named: name).map { (action, $0) }
+            }
+            // A table the player is already standing at doesn't fire until they step away and come back,
+            // so coming out of the photos doesn't immediately offer the photos again.
+            tableInRange = nearestTable(within: Self.approachDistance)?.action
+        }
+
+        private func updateProximityTriggers() {
+            guard !tables.isEmpty, let parent, parent.scene == .disk else { return }
+
+            if let current = tableInRange,
+               let distance = tables.first(where: { $0.action == current }).map({ floorDistance(to: $0.entity) }),
+               distance > Self.departDistance {
+                tableInRange = nil
+            }
+
+            guard tableInRange == nil, let nearest = nearestTable(within: Self.approachDistance) else { return }
+            tableInRange = nearest.action
+            parent.action = nearest.action
+        }
+
+        private func nearestTable(within distance: Float) -> (action: GameAction, entity: Entity)? {
+            tables
+                .map { (table: $0, distance: floorDistance(to: $0.entity)) }
+                .filter { $0.distance <= distance }
+                .min { $0.distance < $1.distance }?
+                .table
+        }
+
+        /// The distance from the camera to an entity measured across the floor, ignoring height.
+        private func floorDistance(to entity: Entity) -> Float {
+            guard let arView else { return .infinity }
+            let camera = arView.cameraTransform.translation
+            let target = entity.position(relativeTo: nil)
+            return hypot(camera.x - target.x, camera.z - target.z)
         }
     }
 }
