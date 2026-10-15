@@ -15,10 +15,11 @@ struct GameView: View {
     /// Called when the player reports back from Amanda's secret server, ending the investigation.
     let onFinished: () -> Void
 
-    /// The scene the game has asked for. Changing it rebuilds the AR view with a fresh session.
+    /// The scene the game has asked for. The AR view swaps scenes in place, in one session.
     @State private var requestedScene = ARSceneID.coaching
-    /// The scene actually on screen. Coaching hands off to the disk table scene inside the AR view.
+    /// The scene actually on screen. The disk table appears once the player has placed it on the floor.
     @State private var presentedScene = ARSceneID.coaching
+    @State private var placement = PlacementState.scanning
     @State private var chatIndex = 0
     @State private var speaker = "BOOTING..."
     @State private var objective = "BOOTING..."
@@ -30,13 +31,12 @@ struct GameView: View {
 
     var body: some View {
         ZStack {
-            ARGameView(scene: requestedScene, presentedScene: $presentedScene, action: $action)
-                .id(requestedScene)
+            ARGameView(scene: requestedScene, presentedScene: $presentedScene, placement: $placement, action: $action)
                 .ignoresSafeArea()
 
-            if presentedScene == .coaching {
+            if let placementBanner {
                 VStack {
-                    Text(">> SEARCH FOR OPEN FLOOR SPACE <<")
+                    Text(placementBanner)
                         .font(.robotoMono(30))
                         .fontWeight(.bold)
                         .foregroundStyle(.red)
@@ -84,12 +84,18 @@ struct GameView: View {
             Spacer()
 
             HStack(alignment: .bottom) {
-                if horizontalSizeClass != .compact {
-                    Text("International Digital Defense Authority\nMission Visualization Interface\nSerial No. WWDC2023\nVer. 6.5.23".uppercased())
-                        .font(.robotoMono(12.5))
-                        .foregroundStyle(.red)
-                        .padding(.leading)
+                VStack(alignment: .leading, spacing: 12) {
+                    if placement == .placed {
+                        moveSceneButton
+                    }
+
+                    if horizontalSizeClass != .compact {
+                        Text("International Digital Defense Authority\nMission Visualization Interface\nSerial No. WWDC2023\nVer. 6.5.23".uppercased())
+                            .font(.robotoMono(12.5))
+                            .foregroundStyle(.red)
+                    }
                 }
+                .padding(.leading)
 
                 Spacer(minLength: 16)
 
@@ -162,6 +168,30 @@ struct GameView: View {
         .opacity(action == nil ? 0 : 1)
         .padding(.bottom)
         .padding(.trailing)
+    }
+
+    private var moveSceneButton: some View {
+        Button {
+            placement = .placing
+        } label: {
+            Label("MOVE SCENE", systemImage: "arrow.up.and.down.and.arrow.left.and.right")
+                .font(.robotoMono(15))
+                .fontWeight(.bold)
+                .foregroundStyle(.red)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .border(.red, width: 2)
+        }
+        .accessibilityHint("Then tap the floor where the scene should go.")
+    }
+
+    /// What to tell the player while the scene isn't on the floor yet.
+    private var placementBanner: String? {
+        switch placement {
+        case .scanning: ">> SEARCH FOR OPEN FLOOR SPACE <<"
+        case .placing: ">> TAP THE FLOOR TO PLACE THE SCENE <<"
+        case .placed: nil
+        }
     }
 
     /// Agent W's current line for the scene the player is in.

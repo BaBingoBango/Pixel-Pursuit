@@ -7,6 +7,7 @@
 
 import RealityKit
 import Testing
+import simd
 @testable import Pixel_Pursuit
 
 struct GameFlowTests {
@@ -32,12 +33,9 @@ struct GameFlowTests {
         #expect(GamePhase.finale.next == .finale)
     }
 
-    @Test func proximityTriggersMapToActions() {
-        #expect(GameAction(notifyActionIdentifier: "Approach Photos Table") == .viewPhotos)
-        #expect(GameAction(notifyActionIdentifier: "Approach Desktop Table") == .viewDesktop)
-        #expect(GameAction(notifyActionIdentifier: "Approach Web Table") == .viewWebHistory)
-        #expect(GameAction(notifyActionIdentifier: "Approach Computer Table") == .accessServer)
-        #expect(GameAction(notifyActionIdentifier: "Approach Photos Exit Table") == nil)
+    @Test func everyTableOffersADifferentAction() {
+        #expect(GameAction.tableActions.count == 4)
+        #expect(Set(GameAction.tableActions.values).count == 4)
     }
 }
 
@@ -45,6 +43,14 @@ struct GameFlowTests {
 struct RealitySceneTests {
     @Test func realityFileIsBundled() {
         #expect(RealitySceneLoader.realityFileURL != nil)
+    }
+
+    /// The proximity triggers look the tables up by name, so the disk scene has to keep all four.
+    @Test func diskSceneHasEveryTable() async throws {
+        let anchor = try await RealitySceneLoader.loadAnchor(for: .disk)
+        for (tableName, action) in GameAction.tableActions {
+            #expect(anchor.findEntity(named: tableName) != nil, "\(tableName) (\(action)) is missing from the disk scene")
+        }
     }
 
     /// Every scene in the compiled Reality Composer file still loads with the current RealityKit, and keeps
@@ -55,10 +61,31 @@ struct RealitySceneTests {
         let anchor = try await RealitySceneLoader.loadAnchor(for: scene)
         #expect(!anchor.children.isEmpty, "\(scene) loaded without any content")
 
+        #if !targetEnvironment(simulator)
+        // The simulator has no ARKit, and its RealityKit reports world anchoring for every loaded scene.
         if case .plane(let alignment, _, _) = anchor.anchoring.target {
             #expect(alignment == .horizontal, "\(scene) is anchored to a \(alignment) plane")
         } else {
             Issue.record("\(scene) is anchored to \(anchor.anchoring.target) instead of a horizontal plane")
         }
+        #endif
+    }
+}
+
+struct ScenePlacementTests {
+    @Test func placedSceneFacesThePlayer() {
+        let position = SIMD3<Float>(1, 0, -2)
+        let transform = ScenePlacement.transform(at: position, facing: SIMD3<Float>(4, 1.5, -2))
+
+        // The scene's front is its +Z axis; it should point from the scene toward the player, along +X here.
+        let front = SIMD3<Float>(transform.columns.2.x, transform.columns.2.y, transform.columns.2.z)
+        #expect(simd_distance(front, SIMD3<Float>(1, 0, 0)) < 0.0001)
+        #expect(simd_distance(ScenePlacement.position(of: transform), position) < 0.0001)
+    }
+
+    @Test func placedSceneStaysLevel() {
+        let transform = ScenePlacement.transform(at: .zero, facing: SIMD3<Float>(-3, 2, 5))
+        let up = SIMD3<Float>(transform.columns.1.x, transform.columns.1.y, transform.columns.1.z)
+        #expect(simd_distance(up, SIMD3<Float>(0, 1, 0)) < 0.0001)
     }
 }
