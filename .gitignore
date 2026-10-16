@@ -28,3 +28,6 @@ Reality Composer Projects/Pixel Pursuit - Realistic.reality
 
 # Marketing captures and composites (large binaries, kept out of git)
 Marketing/
+!Marketing/
+!Marketing/*.md
+Marketing/Screenshots/
