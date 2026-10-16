@@ -86,7 +86,7 @@ No other device sizes are required for an iPad-only app. An app preview (15 to 3
 | Secondary category | none (Education is defensible if you want one) |
 | Price | Free |
 | Availability | All countries or regions |
-| Apple Vision Pro | Off (requires ARKit; already unchecked) |
+| Apple Vision Pro | Off. Under Pricing and Availability, uncheck "Make available on Apple Vision Pro" if it's on; the build requires ARKit, which is what the upload warning was about. |
 | Mac | Not offered; the build opts out of "Designed for iPad" on Mac |
 | Pre-order | No |
 
