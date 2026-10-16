@@ -8,7 +8,8 @@ Usage:
     python3 Scripts/compose-screenshots.py <manifest.json> <output dir>
 
 The manifest is a JSON list of {"image": "path.png", "caption": "TEXT"} entries, in
-App Store order. Output files are numbered to keep that order.
+App Store order. Output files are numbered to keep that order. An entry without a
+caption is passed through as-is, just fitted to the canvas size if it isn't already.
 """
 
 import json
@@ -88,6 +89,18 @@ def compose(capture: Path, caption: str, output: Path) -> None:
     canvas.save(output, "PNG", optimize=True)
 
 
+def passthrough(capture: Path, output: Path) -> None:
+    """Save a capture unframed, letterboxed onto the canvas only if its size differs."""
+    shot = Image.open(capture).convert("RGB")
+    if shot.size != CANVAS:
+        scale = min(CANVAS[0] / shot.width, CANVAS[1] / shot.height)
+        shot = shot.resize((round(shot.width * scale), round(shot.height * scale)), Image.LANCZOS)
+        canvas = Image.new("RGB", CANVAS, BACKGROUND)
+        canvas.paste(shot, ((CANVAS[0] - shot.width) // 2, (CANVAS[1] - shot.height) // 2))
+        shot = canvas
+    shot.save(output, "PNG", optimize=True)
+
+
 def main() -> None:
     if len(sys.argv) != 3:
         sys.exit(__doc__)
@@ -96,7 +109,10 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     for index, entry in enumerate(manifest, start=1):
         output = out_dir / f"{index:02d} {Path(entry['image']).stem}.png"
-        compose(Path(entry["image"]), entry["caption"], output)
+        if entry.get("caption"):
+            compose(Path(entry["image"]), entry["caption"], output)
+        else:
+            passthrough(Path(entry["image"]), output)
         print(f"wrote {output}")
 
 
