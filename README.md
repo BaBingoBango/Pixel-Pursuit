@@ -22,7 +22,9 @@ Open `Pixel Pursuit.xcodeproj` in Xcode 27 or later and run the **Pixel Pursuit*
 > **Note**<br>
 > The Simulator can't do AR, so there the game renders each scene with a fixed virtual camera and skips the room scan and floor placement. That's enough to try the interface and the puzzles, but the scenes inside Amanda's disk are triggered by walking up to things, which only works on a real iPad.
 
-`⌘U` runs the tests: the game logic, loading every scene from the Reality file, and a UI playthrough up to Amanda's disk.
+Debug builds accept a `-startPhase <name>` launch argument (`powerSwitch`, `initializing`, `bootup`, `arInstructions`, `game` or `finale`) to open straight to a screen, which is how the non-AR App Store screenshots are taken: `xcrun simctl launch booted Ethan-Marshall.Pixel-Pursuit -startPhase arInstructions`, then `xcrun simctl io booted screenshot warning.png`.
+
+`⌘U` runs the tests: the game logic, loading every scene from the Reality file, a UI playthrough up to Amanda's disk, and a check that the intro screens fit the display in both orientations. Run that last one on an iPad mini simulator as well as a big iPad; it exists because the warning screen once ran off the screen on 11-inch iPads.
 
 ## Project layout
 
@@ -34,5 +36,6 @@ Open `Pixel Pursuit.xcodeproj` in Xcode 27 or later and run the **Pixel Pursuit*
   - `AppIcon.icon` – the app icon as an Icon Composer package: the I.D.D.A. seal split into Liquid Glass layers (sparkles, ring, globe, pixels) over a near-black gradient. Open it in Icon Composer to tweak glass, translucency, or the per-appearance fills.
   - `Pixel Pursuit.reality` – the compiled Reality Composer scenes the game loads.
 - `Reality Composer Projects/` – the editable `.rcproject` sources for the AR scenes. Current versions of Xcode can't compile these any more, so to change a scene, open the project in Reality Composer on iPad and export a new `Pixel Pursuit.reality`. The bundled file was built from `Pixel Pursuit Iconic`, which uses the stylized "iconic" look of Reality Composer's object library and weighs about 22 MB. `Pixel Pursuit` is the photorealistic variant: its export comes out around 410 MB, which is over GitHub's file size limit, so it isn't checked in. To ship it, export it from Reality Composer and copy it over `Pixel Pursuit/Pixel Pursuit.reality`; running `git update-index --skip-worktree` on that path afterwards keeps the swap out of git for good. `Pixel Pursuit Reduced` is a trimmed-down experiment.
+- `Scripts/` – `compose-screenshots.py` frames App Store screenshots in the game's style, and `reletter-seal.py` re-letters the lower arc of the I.D.D.A. seal in both the asset PNG and the icon's ring from any phrase (it once read "United Nations Security Council", which App Review flagged).
 - `Pixel Pursuit.swiftpm/` – the Swift Playgrounds app package exactly as it was submitted to the Swift Student Challenge, kept for posterity.
 - `Final SSC Submission/` – the submission itself.

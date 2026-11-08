@@ -62,7 +62,7 @@ Don't repeat words from the name or subtitle; App Store Connect already indexes 
 
 **Copyright:** 2026 Ethan Marshall
 
-**Version:** 1.0 · **Build:** 2 (the one Xcode uploaded)
+**Version:** 1.0 · **Build:** 3 (build 2 was rejected on November 8, 2026; archive and upload build 3)
 
 ## Screenshots
 
@@ -74,6 +74,9 @@ iPad 13-inch display, in this order, from `Marketing/Screenshots/Composed/`:
 4. `04 IMG_1781.png` Find the perp's story
 5. `05 title.png`
 6. `06 warning.png`
+
+All six were regenerated on November 8, 2026 with the re-lettered seal (the four iPad captures had the seal in
+their HUD replaced in place; the untouched originals are in `Raw/Original/`). Re-upload them all.
 
 No other device sizes are required for an iPad-only app. An app preview (15 to 30 s screen recording of placing the scene) is optional and would go first.
 
@@ -91,6 +94,9 @@ No other device sizes are required for an iPad-only app. An app preview (15 to 3
 | Pre-order | No |
 
 ## Age rating questionnaire
+
+Build 2 was rejected under guideline 2.3.6 because this questionnaire had never been completed: open App
+Information, click Edit next to Age Rating, answer every question and **save** before resubmitting.
 
 Answer **None / No** throughout, which rates the app **4+**:
 
@@ -128,6 +134,8 @@ Only claim what the whole game honors. Safe to check: **Dark Interface** (the ga
 > 6. Server address: nothingtoseehere.net — Passcode: 4231
 > 7. Tap "enter amanda's server", then "exit server" to reach the verdict screen. Any verdict ends the game.
 >
+> The I.D.D.A. (International Digital Defense Authority), its seal and every person in the story are fictional, created for this game.
+>
 > There are no accounts, no network features, no purchases, and no data collection. Export compliance is declared in the Info.plist (no non-exempt encryption).
 
 Attachment (optional): a short screen recording of a full run helps if a reviewer can't find floor space.
@@ -139,6 +147,31 @@ The form asks whether the app contains third-party content. **YOU**: confirm the
 ## Pricing, tax, and agreements
 
 Free apps only need the Free Apps agreement, already accepted for any developer account that has published. If App Store Connect shows a pending **Paid Apps** agreement, it can be ignored for a free app.
+
+## Resubmission after the November 8, 2026 rejection
+
+App Review (iPad Air 11-inch (M4), iPadOS 27.2) returned three issues against 1.0 (2). What changed:
+
+| Guideline | Finding | Fix |
+| --- | --- | --- |
+| 2.3.6 Accurate Metadata | No age rating assigned | Complete the questionnaire (above) |
+| 4.1(a) Copycats | Metadata resembled the "United Nations Security Council" | The seal's lower arc literally read that. It now reads CYBER CRIMES INVESTIGATION UNIT in the icon, the screenshots and the app (`Scripts/reletter-seal.py`) |
+| 4 Design | Warning screen text ran off the display | The static background dictated the layout's size; the screen is now laid out at the display's width in every orientation (build 3), guarded by `IntroLayoutUITests` |
+
+Steps, in order: complete the age rating; upload build 3 from Xcode; replace all six screenshots; select build 3 in
+the version; then reply to the rejection in the Resolution Center with the message below and resubmit.
+
+**Reply to App Review (paste as written):**
+
+> Thank you for the detailed review. All three items are addressed in build 3:
+>
+> 1. Age rating (2.3.6): the age rating questionnaire has now been completed and saved. The app is rated 4+.
+>
+> 2. Metadata (4.1(a)): the reference was the lower arc of the fictional agency's seal, which read "United Nations Security Council". That artwork has been redrawn and now reads "Cyber Crimes Investigation Unit" in the app icon, in all screenshots and inside the app. The International Digital Defense Authority is an invented organization for this detective story and represents no real body.
+>
+> 3. Design (4): the System Access Warning screen's text was clipped on 11-inch and smaller iPads because its background image was dictating the layout's size. Build 3 lays the screen out at the display's width in every orientation and scrolls only when it must. We verified it on the iPad Air 11-inch (M4) and iPad mini running iPadOS 27.2 in both orientations, and added an automated UI test so it cannot regress.
+>
+> Thank you!
 
 ## Checking the limits
 

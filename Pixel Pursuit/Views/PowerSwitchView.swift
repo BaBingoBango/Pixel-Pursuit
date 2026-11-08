@@ -16,17 +16,20 @@ struct PowerSwitchView: View {
     @State private var isPowerLightPulsing = false
 
     var body: some View {
-        ViewThatFits(in: .vertical) {
-            content
+        // The page is always laid out at the screen's width and stretched to at least its height, so the
+        // spacers spread the content out when it fits and the page scrolls only when it doesn't.
+        GeometryReader { geometry in
             ScrollView {
                 content
+                    .frame(maxWidth: .infinity, minHeight: geometry.size.height)
             }
+            .scrollBounceBehavior(.basedOnSize)
         }
         .padding(.horizontal)
         .onAppear {
             // Play Clair de Lune! ❤️
             GameAudio.playLooping("Clair de Lune")
-            withAnimation(.linear(duration: 10)) {
+            withAnimation(.linear(duration: 4)) {
                 contentOpacity = 1
             }
             isPowerLightPulsing = true
@@ -37,8 +40,8 @@ struct PowerSwitchView: View {
         }
     }
 
-    // The fade lives on the content rather than on the container above: its scrolling fallback is
-    // UIKit-backed, and UIKit ignores taps on a view while its opacity animates.
+    // The fade lives on the content rather than on the scroll view above: the scroll view is UIKit-backed,
+    // and UIKit ignores taps on a view while its opacity animates.
     private var content: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("computer forensics")

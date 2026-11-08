@@ -24,9 +24,16 @@ struct AnimatedImageView: View {
             if let animation {
                 let elapsed = context.date.timeIntervalSinceReferenceDate
                 let frame = Int(elapsed / animation.frameDuration) % animation.frames.count
-                Image(uiImage: animation.frames[frame])
-                    .resizable()
-                    .scaledToFill()
+                // Sized by whatever proposes to it, never by the GIF: a filled image on its own reports the
+                // GIF's proportions upwards, which stretched the warning screen past the display on 11-inch
+                // and smaller iPads.
+                Color.clear
+                    .overlay {
+                        Image(uiImage: animation.frames[frame])
+                            .resizable()
+                            .scaledToFill()
+                    }
+                    .clipped()
                     .accessibilityHidden(true)
             } else {
                 Color.clear

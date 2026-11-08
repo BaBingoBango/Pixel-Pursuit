@@ -13,11 +13,13 @@ struct FinaleView: View {
     @State private var contentOpacity = 0.0
 
     var body: some View {
-        ViewThatFits(in: .vertical) {
-            content
+        // Laid out at the screen's width, centered when it fits, scrolling only when it doesn't.
+        GeometryReader { geometry in
             ScrollView {
                 content
+                    .frame(maxWidth: .infinity, minHeight: geometry.size.height)
             }
+            .scrollBounceBehavior(.basedOnSize)
         }
         .padding()
         .onAppear {
@@ -29,8 +31,8 @@ struct FinaleView: View {
         }
     }
 
-    // The fade lives on the content rather than on the container above: its scrolling fallback is
-    // UIKit-backed, and UIKit ignores taps on a view while its opacity animates.
+    // The fade lives on the content rather than on the scroll view above: the scroll view is UIKit-backed,
+    // and UIKit ignores taps on a view while its opacity animates.
     private var content: some View {
         VStack {
             if !isShowingFinalMessage {
